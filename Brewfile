@@ -51,15 +51,18 @@ cask '1password'
 cask '1password-cli'
 cask 'aerial'
 cask 'alfred'
+cask 'bartender'
 cask 'caffeine'
 cask 'datagrip'
 cask 'dbngin'
 cask 'docker'
 cask 'firefox'
+cask 'gifox'
 cask 'google-backup-and-sync'
 cask 'google-chrome'
 cask 'imageoptim'
 cask 'insomnia'
+cask 'macvim'
 cask 'phpstorm'
 cask 'screenflow'
 cask 'slack'
@@ -96,3 +99,4 @@ mas 'Numbers', id: 409203825
 mas 'Speedtest', id: 1153157709
 mas 'Things', id: 904280696
 mas 'Tweetbot', id: 1384080005
+mas 'BetterSnapTool', id: 417375580

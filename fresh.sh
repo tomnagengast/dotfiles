@@ -55,3 +55,6 @@ source .macos
 
 # Copy for SanFranciso font
 cp /System/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/*.otf ~/Library/Fonts
+
+# Install Things Helper for todo autofill
+open /Applications/ThingsMacSandboxHelper.app

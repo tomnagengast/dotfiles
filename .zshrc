@@ -36,6 +36,9 @@ prompt pure
 zstyle :prompt:pure:git:branch color black
 zstyle :prompt:pure:git:dirty color black
 export PURE_PROMPT_SYMBOL="❯" # or $
+export PURE_GIT_DOWN_ARROW="⇩" # ⇣
+export PURE_GIT_UP_ARROW="⇧" # ⇡
+export PURE_GIT_STASH_SYMBOL="" # ≡
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8

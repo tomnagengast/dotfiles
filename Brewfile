@@ -7,7 +7,7 @@ tap 'homebrew/bundle'
 # Binaries
 brew 'bash' # Latest Bash version
 brew 'coreutils' # Those that come with macOS are outdated
-brew 'ffmpeg'
+brew 'ffmpeg' # https://github.com/ZachNagengast/dotfiles/blob/master/brew-install.sh
 brew 'gh'
 brew 'git'
 brew 'grep'
@@ -70,15 +70,15 @@ cask 'the-unarchiver'
 # cask 'there'
 # cask 'tinkerwell'
 cask 'visual-studio-code'
-# cask 'vlc'
+cask 'vlc'
 cask 'zoomus'
 
 # Quicklook
-# cask 'qlcolorcode'
-# cask 'qlmarkdown'
-# cask 'quicklook-json'
-# cask 'quicklook-csv'
-# cask 'qlstephen'
+cask 'qlcolorcode'
+cask 'qlmarkdown'
+cask 'quicklook-json'
+cask 'quicklook-csv'
+cask 'qlstephen'
 
 # Fonts
 cask 'font-lato'

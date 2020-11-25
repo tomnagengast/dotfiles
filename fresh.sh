@@ -2,6 +2,10 @@
 
 echo "Setting up your Mac..."
 
+# Fix zsh permissions (https://github.com/ohmyzsh/ohmyzsh/issues/6835)
+chmod 755 /usr/local/share/zsh
+chmod 755 /usr/local/share/zsh/site-functions
+
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -13,6 +17,9 @@ brew update
 # Install all our dependencies with bundle (See Brewfile)
 brew tap homebrew/bundle
 brew bundle
+
+# Install vscode extensions (https://github.com/karaage0703/vscode-dotfiles)
+code --install-extension sharat.vscode-brewfile
 
 # Set default MySQL root password and auth type.
 mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_password BY 'password'; FLUSH PRIVILEGES;"

@@ -37,7 +37,7 @@ alias watch="npm run watch"
 
 # Git
 alias gb="git branch"
-alias gc="git checkout"
+alias gc="git go"
 alias gl="glol"
 alias gs="gss"
 alias amend="git add . && git commit --amend --no-edit"

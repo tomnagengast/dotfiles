@@ -1,23 +1,20 @@
 # Path to your dotfiles.
 export DOTFILES=$HOME/.dotfiles
 
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
 # Enable completions
 autoload -Uz compinit && compinit
 
-# Minimal - Theme Settings
-export MNML_INSERT_CHAR="$"
-export MNML_PROMPT=(mnml_git mnml_keymap)
-export MNML_RPROMPT=('mnml_cwd 20')
+# # Pure - Theme Settings
+# export MNML_INSERT_CHAR="$"
+# export MNML_PROMPT=(mnml_git mnml_keymap)
+# export MNML_RPROMPT=('mnml_cwd 20')
 
-# Set name of the theme to load
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="minimal"
+# # Set name of the theme to load
+# # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME=""
 
 # Uncomment the following line to automatically update without prompting.
 DISABLE_UPDATE_PROMPT="true"
@@ -46,3 +43,6 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='vim'
 fi
+
+# Load Pure iTerm theme
+# prompt pure

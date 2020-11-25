@@ -28,6 +28,9 @@ code --install-extension pkief.material-icon-theme
 # Install PHP extensions with PECL
 # pecl install memcached imagick
 
+# Install Pure iTerm theme
+npm install --global pure-prompt
+
 # Install global Composer packages
 /usr/local/bin/composer global require laravel/installer laravel/valet
 
@@ -60,4 +63,4 @@ source .macos
 cp /System/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/*.otf ~/Library/Fonts
 
 # Install Things Helper for todo autofill
-open /Applications/ThingsMacSandboxHelper.app
+# open /Applications/ThingsMacSandboxHelper.app

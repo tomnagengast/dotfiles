@@ -20,6 +20,7 @@ brew bundle
 
 # Install vscode extensions (https://github.com/karaage0703/vscode-dotfiles)
 code --install-extension sharat.vscode-brewfile
+code --install-extension pkief.material-icon-theme
 
 # Set default MySQL root password and auth type.
 # mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_password BY 'password'; FLUSH PRIVILEGES;"
@@ -51,3 +52,6 @@ ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
 # Set macOS preferences
 # We will run this last because this will reload the shell
 source .macos
+
+# Copy for SanFranciso font
+cp /System/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/*.otf ~/Library/Fonts

@@ -512,6 +512,42 @@
         "options": {
           "full_name": "zoomus"
         }
+      },
+      "vlc": {
+        "version": "3.0.11.1",
+        "options": {
+          "full_name": "vlc"
+        }
+      },
+      "qlcolorcode": {
+        "version": "3.1.1",
+        "options": {
+          "full_name": "qlcolorcode"
+        }
+      },
+      "qlmarkdown": {
+        "version": "1.3.6",
+        "options": {
+          "full_name": "qlmarkdown"
+        }
+      },
+      "quicklook-json": {
+        "version": "latest",
+        "options": {
+          "full_name": "quicklook-json"
+        }
+      },
+      "quicklook-csv": {
+        "version": "1.3",
+        "options": {
+          "full_name": "quicklook-csv"
+        }
+      },
+      "qlstephen": {
+        "version": "1.5.1",
+        "options": {
+          "full_name": "qlstephen"
+        }
       }
     },
     "mas": {
@@ -542,7 +578,7 @@
       "big_sur": {
         "HOMEBREW_VERSION": "2.5.11",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "bc76f6f48fa9955c113b71c6d391d67fd4467bdb",
+        "Homebrew/homebrew-core": "3f24cd2a0ba1dab91d47ac0876b97595b5989fe7",
         "CLT": "12.2.0.0.1.1604076827",
         "Xcode": "12.2",
         "macOS": "11.0.1"

@@ -3,10 +3,12 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
+tap 'fishtown-analytics/dbt'
 
 # Binaries
 brew 'bash' # Latest Bash version
 brew 'coreutils' # Those that come with macOS are outdated
+brew 'dbt'
 brew 'ffmpeg' # https://github.com/ZachNagengast/dotfiles/blob/master/brew-install.sh
 brew 'gh'
 brew 'git'
@@ -41,8 +43,6 @@ brew 'node'
 # brew 'yarn'
 
 # Apps
-
-
 cask '1password'
 cask '1password-cli'
 # cask 'aerial'

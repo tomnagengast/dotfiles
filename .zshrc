@@ -7,13 +7,6 @@ export ZSH=$HOME/.oh-my-zsh
 # Enable completions
 autoload -Uz compinit && compinit
 
-# # Pure - Theme Settings
-# export MNML_INSERT_CHAR="$"
-# export MNML_PROMPT=(mnml_git mnml_keymap)
-# export MNML_RPROMPT=('mnml_cwd 20')
-
-# # Set name of the theme to load
-# # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME=""
 
 # Uncomment the following line to automatically update without prompting.
@@ -21,7 +14,7 @@ DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
-HIST_STAMPS="dd/mm/yyyy"
+HIST_STAMPS="yyyy-mm-dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM=$DOTFILES
@@ -35,6 +28,15 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+# Load Pure iTerm theme
+autoload -U promptinit; promptinit
+prompt pure
+
+# Pure - Theme Settings
+zstyle :prompt:pure:git:branch color black
+zstyle :prompt:pure:git:dirty color black
+export PURE_PROMPT_SYMBOL="❯" # or $
+
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
@@ -44,5 +46,3 @@ else
   export EDITOR='vim'
 fi
 
-# Load Pure iTerm theme
-# prompt pure

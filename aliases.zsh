@@ -1,6 +1,6 @@
 # Shortcuts
 alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
-alias reloadshell="source $HOME/.zshrc"
+alias rsh="source $HOME/.zshrc"
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 alias ll="/usr/local/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-directories-first"
 alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
@@ -36,7 +36,6 @@ alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
 alias watch="npm run watch"
 
 # Git
-alias gst="git status"
 alias gb="git branch"
 alias gc="git checkout"
 alias gl="git log --oneline --decorate --color"
@@ -52,3 +51,32 @@ alias resolve="git add . && git commit --no-edit"
 alias stash="git stash -u"
 alias unstage="git restore --staged ."
 alias wip="commit wip"
+
+# Housekeeping
+
+# Enable aliases to be sudo’ed
+alias sudo='sudo '
+
+# Recursively delete `.DS_Store` files
+alias cleands="find . -type f -name '*.DS_Store' -ls -delete"
+
+# Recursively delete `.bak` files
+alias cleanbak="find . -type f -name '*.bak' -ls -delete"
+
+# Recursively delete `.DS_Store` and `.bak` files
+alias cleanup="cleands && cleanbak"
+
+# Utilities
+
+# Get week number
+alias week='date +%V'
+
+# Get local IP address
+alias localip="ipconfig getifaddr en0"
+
+# Hide/show all desktop icons (useful when presenting)
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'

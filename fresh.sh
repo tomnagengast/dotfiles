@@ -34,6 +34,9 @@ npm install --global pure-prompt
 # Install global Composer packages
 /usr/local/bin/composer global require laravel/installer laravel/valet
 
+# Install Pure iTerm theme (https://github.com/sindresorhus/pure)
+/usr/local/bin/npm install --global pure-prompt
+
 # Install Laravel Valet
 $HOME/.composer/vendor/bin/valet install
 

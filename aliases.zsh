@@ -36,10 +36,6 @@ alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
 alias watch="npm run watch"
 
 # Git
-alias gb="git branch"
-alias gc="git go"
-alias gl="glol"
-alias gs="gss"
 alias amend="git add . && git commit --amend --no-edit"
 alias commit="git add . && git commit -m"
 alias diff="git diff"
@@ -52,6 +48,11 @@ alias resolve="git add . && git commit --no-edit"
 alias stash="git stash -u"
 alias unstage="git restore --staged ."
 alias wip="commit wip"
+alias gb="git branch"
+alias gc="git go"
+alias gl="glol"
+alias gs="gss"
+alias ga="commit" # This is trickier to drop than I'd thought...
 
 # Housekeeping
 

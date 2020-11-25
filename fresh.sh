@@ -19,14 +19,18 @@ brew tap homebrew/bundle
 brew bundle
 
 # Install vscode extensions (https://github.com/karaage0703/vscode-dotfiles)
-code --install-extension sharat.vscode-brewfile
-code --install-extension pkief.material-icon-theme
-
-# Set default MySQL root password and auth type.
-# mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_password BY 'password'; FLUSH PRIVILEGES;"
-
-# Install PHP extensions with PECL
-# pecl install memcached imagick
+# code --install-extension sharat.vscode-brewfile
+# code --install-extension pkief.material-icon-theme
+# code --install-extension ms-python.python
+# code --install-extension esbenp.prettier-vscode
+# code --install-extension visualstudioexptteam.vscodeintellicode
+# code --install-extension ms-azuretools.vscode-docker
+# code --install-extension felixfbecker.php-intellisense
+# code --install-extension golang.go
+# code --install-extension christian-kohler.path-intellisense
+# code --install-extension equinusocio.vsc-material-theme
+# code --install-extension bastienboutonnet.vscode-dbt
+# code --install-extension github.vscode-pull-request-github
 
 # Install Pure iTerm theme
 npm install --global pure-prompt

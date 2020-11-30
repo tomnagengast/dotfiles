@@ -19,6 +19,7 @@ brew 'mas' # Mac App Store manager
 brew 'svn'
 brew 'trash' # Manage the Trash bin
 brew 'tree' # List directories in a tree structure
+brew 'youtube-dl'
 
 # Development
 brew 'python'
@@ -36,13 +37,15 @@ cask 'bartender'
 cask 'caffeine'
 cask 'dash'
 cask 'datagrip'
-cask 'dbngin'
+# cask 'dbngin'
 cask 'docker'
 cask 'gifox'
 cask 'google-chrome'
 cask 'imageoptim'
 cask 'iterm2'
+cask 'notion'
 cask 'phpstorm'
+cask 'postgres'
 cask 'screenflow'
 cask 'slack'
 cask 'telegram-desktop'

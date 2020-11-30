@@ -18,20 +18,6 @@ brew update
 brew tap homebrew/bundle
 brew bundle
 
-# Install vscode extensions (https://github.com/karaage0703/vscode-dotfiles)
-# code --install-extension sharat.vscode-brewfile
-# code --install-extension pkief.material-icon-theme
-# code --install-extension ms-python.python
-# code --install-extension esbenp.prettier-vscode
-# code --install-extension visualstudioexptteam.vscodeintellicode
-# code --install-extension ms-azuretools.vscode-docker
-# code --install-extension felixfbecker.php-intellisense
-# code --install-extension golang.go
-# code --install-extension christian-kohler.path-intellisense
-# code --install-extension equinusocio.vsc-material-theme
-# code --install-extension bastienboutonnet.vscode-dbt
-# code --install-extension github.vscode-pull-request-github
-
 # Install Pure iTerm theme
 npm install --global pure-prompt
 
@@ -55,6 +41,7 @@ mkdir $HOME/Work
 # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
 rm -rf $HOME/.zshrc
 ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
+ln -s $HOME/.dotfiles/.gitignore_global $HOME/.gitignore_global
 
 # Symlink the Mackup config file to the home directory
 ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg

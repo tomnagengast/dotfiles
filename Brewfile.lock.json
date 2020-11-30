@@ -2,16 +2,19 @@
   "entries": {
     "tap": {
       "homebrew/cask": {
-        "revision": "180710edc2f8e79108df4760af51c17a2bea28c6"
+        "revision": "5c0144ea6519ee0c348dc8f5f1c175556a937f8e"
       },
       "homebrew/cask-fonts": {
-        "revision": "665dc41cc360c8e8b61f0d24890d42ea777655de"
+        "revision": "46d588e36d8d5b0f2f9ca6a278c1fedf87bfe0b0"
       },
       "homebrew/cask-versions": {
-        "revision": "7c1a4af069363344216514a1492cfb665ab6f27f"
+        "revision": "cf2b544df6bca0e521f8faac9efb69a66b085e61"
       },
       "homebrew/bundle": {
-        "revision": "d1a530ada501e983aef2748411b947b8c5696ac9"
+        "revision": "c91584cf498e9eb97aeffe036a7476c2d2a2f204"
+      },
+      "fishtown-analytics/dbt": {
+        "revision": "de69da621723fa7c85d91d9a566633eabf25100b"
       }
     },
     "brew": {
@@ -366,6 +369,31 @@
             }
           }
         }
+      },
+      "dbt": {
+        "version": "0.18.1_1",
+        "bottle": false
+      },
+      "youtube-dl": {
+        "version": "2020.11.24",
+        "bottle": {
+          "cellar": ":any_skip_relocation",
+          "prefix": "/usr/local",
+          "files": {
+            "big_sur": {
+              "url": "https://homebrew.bintray.com/bottles/youtube-dl-2020.11.24.big_sur.bottle.tar.gz",
+              "sha256": "8160bbf37e79e368936244d9629469e4ef2638c51002d2d921fd0f12bc17f85c"
+            },
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/youtube-dl-2020.11.24.catalina.bottle.tar.gz",
+              "sha256": "7305c4f4b9b2a1c0c2fe4473f40d26813f0b7ffe4b25c36200f081e09f910deb"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/youtube-dl-2020.11.24.mojave.bottle.tar.gz",
+              "sha256": "cadcbc698b805ad935ebe71f04ee9ef8efa9e06feb94aafa15d92507b5893738"
+            }
+          }
+        }
       }
     },
     "cask": {
@@ -548,6 +576,36 @@
         "options": {
           "full_name": "qlstephen"
         }
+      },
+      "aerial": {
+        "version": "2.1.5",
+        "options": {
+          "full_name": "aerial"
+        }
+      },
+      "dash": {
+        "version": "5.5.1",
+        "options": {
+          "full_name": "dash"
+        }
+      },
+      "imageoptim": {
+        "version": "1.8.8",
+        "options": {
+          "full_name": "imageoptim"
+        }
+      },
+      "postgres": {
+        "version": "2.4.1",
+        "options": {
+          "full_name": "postgres"
+        }
+      },
+      "thingsmacsandboxhelper": {
+        "version": "3.24",
+        "options": {
+          "full_name": "thingsmacsandboxhelper"
+        }
       }
     },
     "mas": {
@@ -578,7 +636,7 @@
       "big_sur": {
         "HOMEBREW_VERSION": "2.5.11",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "3f24cd2a0ba1dab91d47ac0876b97595b5989fe7",
+        "Homebrew/homebrew-core": "26e0b4eb176370a3ff6f8107dca31f6ea06e7f7b",
         "CLT": "12.2.0.0.1.1604076827",
         "Xcode": "12.2",
         "macOS": "11.0.1"

@@ -18,6 +18,9 @@ brew update
 brew tap homebrew/bundle
 brew bundle
 
+# Download the Simba Spark ODBC (https://pages.databricks.com/ODBC-Driver-Download.html)
+# https://databricks.com/wp-content/uploads/drivers-2020/SimbaSparkODBC-2.6.16.1019-OSX.zip
+
 # Install Pure iTerm theme
 npm install --global pure-prompt
 

@@ -20,7 +20,13 @@ alias work="cd $HOME/Work/"
 alias sites="cd $HOME/Sites"
 
 # Python
-alias python="/usr/local/bin/python3"
+alias newpython="LDFLAGS="-L$(xcrun --show-sdk-path)/usr/lib" pyenv install" #  3.8.6
+# alias python="/usr/local/bin/python3"
+# alias pip="/usr/local/bin/pip3"
+
+# Databricks
+alias dbx="databricks"
+alias start-infra-dev="databricks clusters start --cluster-id 1206-161743-codex424"
 
 # Laravel
 alias a="php artisan"

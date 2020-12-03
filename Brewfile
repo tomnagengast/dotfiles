@@ -55,7 +55,7 @@ cask 'the-unarchiver'
 cask 'thingsmacsandboxhelper'
 cask 'visual-studio-code'
 cask 'vlc'
-cask 'zoomus'
+cask 'zoom'
 
 # Quicklook
 cask 'qlcolorcode'

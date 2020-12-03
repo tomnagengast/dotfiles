@@ -52,12 +52,12 @@ ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
 # Symlink the .gitconfig file to the home directory
 ln -s $HOME/.dotfiles/.gitconfig $HOME/.gitconfig
 
-# Set macOS preferences
-# We will run this last because this will reload the shell
-source .macos
-
 # Copy for SanFranciso font
 cp /System/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/*.otf ~/Library/Fonts
 
 # Install Things Helper for todo autofill
 # open /Applications/ThingsMacSandboxHelper.app
+
+# Set macOS preferences
+# We will run this last because this will reload the shell
+source .macos

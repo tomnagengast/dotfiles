@@ -12,13 +12,16 @@ brew 'gh'
 brew 'git'
 brew 'grep'
 brew 'httpie'
+brew 'jq'
 brew 'mackup'
 brew 'mas' # Mac App Store manager
 brew 'pyenv' # https://opensource.com/article/19/5/python-3-default-mac
+brew 'pyenv-virtualenv'
 brew 'svn'
 brew 'trash' # Manage the Trash bin
 brew 'tree' # List directories in a tree structure
 brew 'youtube-dl'
+brew 'zlib'
 
 # Development
 brew 'python'

@@ -27,6 +27,7 @@ alias newpython="LDFLAGS="-L$(xcrun --show-sdk-path)/usr/lib" pyenv install" #  
 # Databricks
 alias dbx="databricks"
 alias start-infra-dev="databricks clusters start --cluster-id 1206-161743-codex424"
+alias check-infra-dev="databricks clusters get --cluster-id 1206-161743-codex424"
 
 # Laravel
 alias a="php artisan"
@@ -43,6 +44,7 @@ alias watch="npm run watch"
 
 # Git
 alias amend="git add . && git commit --amend --no-edit"
+alias branches="git branches"
 alias commit="git add . && git commit -m"
 alias diff="git diff"
 alias force="git push --force"

@@ -57,8 +57,9 @@ alias stash="git stash -u"
 alias unstage="git restore --staged ."
 alias wip="commit wip"
 alias gb="git branch"
+alias aye="git checkout"
 alias gc="git go"
-alias gl="glol"
+alias gl="glo"
 alias gs="gss"
 alias ga="commit" # This is trickier to drop than I'd thought...
 

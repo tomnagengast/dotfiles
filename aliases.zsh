@@ -1,6 +1,7 @@
 # Shortcuts
 alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
 alias rsh="source $HOME/.zshrc"
+alias dotfiles="code $HOME/.dotfiles"
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 alias ll="/usr/local/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-directories-first"
 alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
@@ -14,7 +15,6 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 
 # Directories
-alias dotfiles="cd $DOTFILES"
 alias library="cd $HOME/Library"
 alias work="cd $HOME/Work/"
 alias sites="cd $HOME/Sites"

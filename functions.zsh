@@ -3,6 +3,16 @@ function mkd() {
 	mkdir -p "$@" && cd "$_";
 }
 
+function cpwd() (
+	pwd | tr / _
+)
+
+function new_local_python() (
+	pyenv virtualenv 3.8.6 $(cpwd)
+	pyenv local $(cpwd)
+	pyenv versions
+)
+
 # Change working directory to the top-most Finder window location
 function cdf() { # short for `cdfinder`
 	cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')";

@@ -19,6 +19,9 @@ alias library="cd $HOME/Library"
 alias work="cd $HOME/Work/"
 alias sites="cd $HOME/Sites"
 
+# dbt
+alias dbt_refresh='dbt clean; dbt deps; dbt seed'
+
 # Python
 alias newpython="LDFLAGS="-L$(xcrun --show-sdk-path)/usr/lib" pyenv install" #  3.8.6
 # alias python="/usr/local/bin/python3"

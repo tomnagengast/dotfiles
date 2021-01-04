@@ -86,3 +86,5 @@ mas 'Numbers', id: 409203825
 mas 'Things', id: 904280696
 mas 'Tweetbot', id: 1384080005
 mas 'BetterSnapTool', id: 417375580
+mas 'Microsoft Outlook', id: 985367838
+mas 'Microsoft Excel', id: 462058435

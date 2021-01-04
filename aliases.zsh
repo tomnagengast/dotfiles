@@ -21,6 +21,7 @@ alias sites="cd $HOME/Sites"
 
 # dbt
 alias dbt_refresh='dbt clean; dbt deps; dbt seed'
+alias dbt_data_refresh='dbt run-operation stage_external_sources; ../scripts/get_dbt_prod_artifacts.sh'
 
 # Python
 alias newpython="LDFLAGS="-L$(xcrun --show-sdk-path)/usr/lib" pyenv install" #  3.8.6

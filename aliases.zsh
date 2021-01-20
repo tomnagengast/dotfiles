@@ -32,6 +32,7 @@ alias newpython="LDFLAGS="-L$(xcrun --show-sdk-path)/usr/lib" pyenv install" #  
 alias dbx="databricks"
 alias start-infra-dev="databricks clusters start --cluster-id 1206-161743-codex424"
 alias check-infra-dev="databricks clusters get --cluster-id 1206-161743-codex424"
+alias cp_dbx="mkd tmp; databricks workspace export_dir / ."
 
 # Laravel
 alias a="php artisan"

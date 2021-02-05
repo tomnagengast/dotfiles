@@ -20,6 +20,7 @@ brew 'mas' # Mac App Store manager
 brew 'pyenv' # https://opensource.com/article/19/5/python-3-default-mac
 brew 'pyenv-virtualenv'
 brew 'svn'
+brew 'terminal-notifier'
 brew 'tldr'
 brew 'trash' # Manage the Trash bin
 brew 'tree' # List directories in a tree structure
@@ -50,6 +51,7 @@ cask 'google-chrome'
 cask 'imageoptim'
 cask 'iterm2'
 cask 'keybase'
+cask 'kitty'
 cask 'notion'
 cask 'obsidian'
 cask 'phpstorm'

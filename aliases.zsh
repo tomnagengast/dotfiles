@@ -22,6 +22,7 @@ alias sites="cd $HOME/Sites"
 # dbt
 alias dbt_refresh='dbt clean; dbt deps; dbt seed'
 alias dbt_data_refresh='dbt run-operation stage_external_sources; ../scripts/get_dbt_prod_artifacts.sh'
+alias dbt_refresh_all='dbt_refresh; dbt_data_refresh'
 
 # Python
 alias newpython="LDFLAGS="-L$(xcrun --show-sdk-path)/usr/lib" pyenv install" #  3.8.6
@@ -96,3 +97,4 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+alias myprs='gh pr list -a tnagengast'

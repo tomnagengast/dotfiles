@@ -6,7 +6,8 @@ export ZSH=$HOME/.oh-my-zsh
 
 # Enable completions
 autoload -Uz compinit && compinit
-
+# Completion for kitty (https://sw.kovidgoyal.net/kitty/#id27)
+# kitty + complete setup zsh | source /dev/stdin
 ZSH_THEME=""
 
 # Uncomment the following line to automatically update without prompting.
@@ -24,7 +25,11 @@ ZSH_CUSTOM=$DOTFILES
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+    git
+    bgnotify
+    web-search
+)
 
 source $ZSH/oh-my-zsh.sh
 

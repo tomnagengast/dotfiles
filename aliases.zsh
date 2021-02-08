@@ -20,9 +20,11 @@ alias work="cd $HOME/Work/"
 alias sites="cd $HOME/Sites"
 
 # dbt
-alias dbt_refresh='dbt clean; dbt deps; dbt seed'
-alias dbt_data_refresh='dbt run-operation stage_external_sources; ../scripts/get_dbt_prod_artifacts.sh'
-alias dbt_refresh_all='dbt_refresh; dbt_data_refresh'
+alias dbt_refresh="dbt clean; dbt deps; dbt seed"
+alias dbt_data_refresh="dbt run-operation stage_external_sources; ../scripts/get_dbt_prod_artifacts.sh"
+alias dbt_refresh_all="dbt_refresh; dbt_data_refresh"
+alias dr="dbt run -m state:modified"
+alias dt="dbt test -m state:modified --exclude test_name:relationships test_name:equal_rowcount"
 
 # Python
 alias newpython="LDFLAGS="-L$(xcrun --show-sdk-path)/usr/lib" pyenv install" #  3.8.6

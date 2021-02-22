@@ -18,3 +18,4 @@ source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/compl
 
 export DBT_ARTIFACT_STATE_PATH=target/prod/
 export DBT_DEFER_TO_STATE=true
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"

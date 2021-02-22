@@ -23,8 +23,10 @@ alias sites="cd $HOME/Sites"
 alias dbt_refresh="dbt clean; dbt deps; dbt seed"
 alias dbt_data_refresh="dbt run-operation stage_external_sources; ../scripts/get_dbt_prod_artifacts.sh"
 alias dbt_refresh_all="dbt_refresh; dbt_data_refresh"
+alias dl="dbt ls -m state:modified"
 alias dr="dbt run -m state:modified"
 alias dt="dbt test -m state:modified --exclude test_name:relationships test_name:equal_rowcount"
+alias get-pr-template="cat ~/Developer/netlify/data/.github/PULL_REQUEST_TEMPLATE/dbt_model_changes.md | pbcopy"
 
 # Python
 alias newpython="LDFLAGS="-L$(xcrun --show-sdk-path)/usr/lib" pyenv install" #  3.8.6

@@ -22,10 +22,13 @@ alias sites="cd $HOME/Sites"
 # dbt
 alias dbt_refresh="dbt clean; dbt deps; dbt seed"
 alias dbt_data_refresh="dbt run-operation stage_external_sources; ../scripts/get_dbt_prod_artifacts.sh"
-alias dbt_refresh_all="dbt_refresh; dbt_data_refresh"
+alias dra="dbt_refresh; dbt_data_refresh"
+alias dras="dbt clean; dbt deps; ../scripts/get_dbt_prod_artifacts.sh"
 alias dl="dbt ls -m state:modified"
 alias dr="dbt run -m state:modified"
+alias drm="dbt run -m"
 alias dt="dbt test -m state:modified --exclude test_name:relationships test_name:equal_rowcount"
+alias dtm="dbt test --exclude test_name:relationships test_name:equal_rowcount -m"
 alias get-pr-template="cat ~/Developer/netlify/data/.github/PULL_REQUEST_TEMPLATE/dbt_model_changes.md | pbcopy"
 
 # Python

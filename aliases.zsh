@@ -31,10 +31,26 @@ alias dt="dbt test -m state:modified --exclude test_name:relationships test_name
 alias dtm="dbt test --exclude test_name:relationships test_name:equal_rowcount -m"
 alias get-pr-template="cat ~/Developer/netlify/data/.github/PULL_REQUEST_TEMPLATE/dbt_model_changes.md | pbcopy"
 
+# GitHub
+alias new-pr="gh pr create -a tnagengast -p 'Tom Nagengast' --web -F ~/Developer/netlify/data/.github/PULL_REQUEST_TEMPLATE/dbt_model_changes.md"
+alias runs="gh run watch -R netlify/data"
+alias lint="sqlfluff lint"  # $(git diff --name-only main | grep -E '(^snowflake_dbt/models.*[.]sql$)' | sed 's/snowflake_dbt\///g')"
+
 # Python
 alias newpython="LDFLAGS="-L$(xcrun --show-sdk-path)/usr/lib" pyenv install" #  3.8.6
 # alias python="/usr/local/bin/python3"
 # alias pip="/usr/local/bin/pip3"
+
+# Sourcegraph
+# alias sourcegraph-start="docker run \
+#     --publish 7080:7080 \
+#     --publish 127.0.0.1:3370:3370 --rm \
+#     --volume ~/.sourcegraph/config:/etc/sourcegraph \
+#     --volume ~/.sourcegraph/data:/var/opt/sourcegraph:delegated \
+#     sourcegraph/server:3.27.4"
+
+# Snowflake
+alias snowsql=/Applications/SnowSQL.app/Contents/MacOS/snowsql
 
 # Databricks
 alias dbx="databricks"
@@ -54,6 +70,7 @@ alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
 alias watch="npm run watch"
 
 # Git
+alias clear-local-branches='git branch | grep -v "master" | xargs git branch -D'
 alias amend="git add . && git commit --amend --no-edit"
 alias branches="git branches"
 alias commit="git add . && git commit -m"

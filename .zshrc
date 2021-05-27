@@ -61,3 +61,6 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 compinit -i
+
+# added by Snowflake SnowSQL installer v1.2
+export PATH=/Applications/SnowSQL.app/Contents/MacOS:$PATH

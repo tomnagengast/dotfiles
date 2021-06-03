@@ -7,6 +7,9 @@ export PATH="$HOME/.composer/vendor/bin:$PATH"
 # Load Node global installed binaries
 export PATH="$HOME/.node/bin:$PATH"
 
+# Load Sublime Text bin for `subl command
+export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
+
 # Use project specific binaries before global ones
 export PATH="node_modules/.bin:vendor/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
@@ -17,5 +20,5 @@ source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
 export DBT_ARTIFACT_STATE_PATH=target/prod/
-export DBT_DEFER_TO_STATE=true
+export DBT_DEFER_TO_STATE=false
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"

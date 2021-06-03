@@ -33,8 +33,9 @@ alias get-pr-template="cat ~/Developer/netlify/data/.github/PULL_REQUEST_TEMPLAT
 
 # GitHub
 alias new-pr="gh pr create -a tnagengast -p 'Tom Nagengast' --web -F ~/Developer/netlify/data/.github/PULL_REQUEST_TEMPLATE/dbt_model_changes.md"
-alias runs="gh run watch -R netlify/data"
-alias lint="sqlfluff lint"  # $(git diff --name-only main | grep -E '(^snowflake_dbt/models.*[.]sql$)' | sed 's/snowflake_dbt\///g')"
+alias runs="gh run watch -R netlify/$(basename $(git remote get-url origin) .git)"
+alias lint="sqlfluff lint \$(git diff origin/main --name-only | grep -E '(^snowflake_dbt/models.*[.]sql$)' | sed 's/snowflake_dbt\///g')"
+
 
 # Python
 alias newpython="LDFLAGS="-L$(xcrun --show-sdk-path)/usr/lib" pyenv install" #  3.8.6
@@ -51,6 +52,7 @@ alias newpython="LDFLAGS="-L$(xcrun --show-sdk-path)/usr/lib" pyenv install" #  
 
 # Snowflake
 alias snowsql=/Applications/SnowSQL.app/Contents/MacOS/snowsql
+alias snf=/Applications/SnowSQL.app/Contents/MacOS/snowsql
 
 # Databricks
 alias dbx="databricks"

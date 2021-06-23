@@ -1,0 +1,8 @@
+#!/usr/bin/env zx
+
+// $.shell = '/usr/bin/zsh'
+// $.verbose = 'false'
+
+const now = Date.now();
+
+console.log(chalk.blue(`The time is ${now}`))

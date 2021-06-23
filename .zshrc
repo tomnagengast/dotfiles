@@ -4,6 +4,9 @@ export DOTFILES=$HOME/.dotfiles
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+# Make ./scripts executable
+chmod +x $DOTFILES/scripts/*
+
 # Enable completions
 autoload -Uz compinit && compinit
 # Completion for kitty (https://sw.kovidgoyal.net/kitty/#id27)
@@ -61,6 +64,3 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 compinit -i
-
-# added by Snowflake SnowSQL installer v1.2
-export PATH=/Applications/SnowSQL.app/Contents/MacOS:$PATH

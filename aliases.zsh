@@ -20,8 +20,7 @@ alias work="cd $HOME/Developer/netlify/data"
 alias sites="cd $HOME/Sites"
 
 # dbt
-alias dbt_refresh="dbt clean; dbt deps; dbt seed"
-alias dbt_data_refresh="dbt run-operation stage_external_sources; ../scripts/get_dbt_prod_artifacts.sh"
+alias dbt_reset="dbt clean && dbt deps && ../scripts/get_dbt_prod_artifacts.sh"
 alias dra="dbt_refresh; dbt_data_refresh"
 alias dras="dbt clean; dbt deps; ../scripts/get_dbt_prod_artifacts.sh"
 alias dl="dbt ls -m state:modified"
@@ -33,8 +32,9 @@ alias get-pr-template="cat ~/Developer/netlify/data/.github/PULL_REQUEST_TEMPLAT
 
 # GitHub
 alias new-pr="gh pr create -a tnagengast -p 'Tom Nagengast' --web -F ~/Developer/netlify/data/.github/PULL_REQUEST_TEMPLATE/dbt_model_changes.md"
-alias runs="gh run watch -R netlify/$(basename $(git remote get-url origin) .git)"
-alias lint="sqlfluff lint \$(git diff origin/main --name-only | grep -E '(^snowflake_dbt/models.*[.]sql$)' | sed 's/snowflake_dbt\///g')"
+alias runs="gh run watch -R netlify/\$(basename $(git remote get-url origin) .git)"
+# alias lint="sqlfluff lint \$(git diff origin/main --name-only | grep -E '(^snowflake_dbt/models.*[.]sql$)' | sed 's/snowflake_dbt\///g') --exclude-rules L009"
+# alias lint-dry="echo \$(git diff origin/main --name-only | grep -E '(^snowflake_dbt/models.*[.]sql$)' | sed 's/snowflake_dbt\///g')"
 
 
 # Python

@@ -10,6 +10,7 @@ brew 'coreutils' # Those that come with macOS are outdated
 brew 'ffmpeg' # https://github.com/ZachNagengast/dotfiles/blob/master/brew-install.sh
 brew 'gh'
 brew 'git'
+brew 'git-recent'
 brew 'goto'
 brew 'grep'
 brew 'httpie'

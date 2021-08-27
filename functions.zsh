@@ -78,8 +78,19 @@ function lint() {
 		# 	echo "Linting all models..."
 			# sqlfluff lint
 		# else
-			echo "Linting models: $@"
-			sqlfluff lint $@ --exclude-rules L009
+		echo "Linting models: $@"
+		sqlfluff lint $@ --exclude-rules L009
 		# fi;
 	fi;
+}
+
+function transform_query() {
+	echo "\nValidating configs..."
+	mql validate-configs --config-dir .
+	echo "\nCommitting configs..."
+	mql commit-configs --config-dir . --pin true
+	echo "\nQuerying metric: $@..."
+	mql query --metrics $@ --dimensions ds --limit 10 --order -ds
+	echo "\nUnpinning model..."
+	mql unpin-model
 }

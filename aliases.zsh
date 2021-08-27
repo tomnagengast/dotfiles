@@ -1,13 +1,14 @@
 # Shortcuts
 alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
 alias rsh="source $HOME/.zshrc"
-alias dotfiles="code $HOME/.dotfiles"
+alias df="subl $HOME/.dotfiles"
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 alias ll="/usr/local/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-directories-first"
 alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 alias datagrip='open -a /Applications/DataGrip.app "`pwd`"'
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 alias c="clear"
+alias s="subl"
 
 # Navigation
 alias ..="cd .."
@@ -31,7 +32,7 @@ alias dtm="dbt test --exclude test_name:relationships test_name:equal_rowcount -
 alias get-pr-template="cat ~/Developer/netlify/data/.github/PULL_REQUEST_TEMPLATE/dbt_model_changes.md | pbcopy"
 
 # GitHub
-alias new-pr="gh pr create -a tnagengast -p 'Tom Nagengast' --web -F ~/Developer/netlify/data/.github/PULL_REQUEST_TEMPLATE/dbt_model_changes.md"
+alias new-pr="gh pr create -a tnagengast --web -F ~/Developer/netlify/data/.github/PULL_REQUEST_TEMPLATE/dbt_model_changes.md"
 alias runs="gh run watch -R netlify/\$(basename $(git remote get-url origin) .git)"
 # alias lint="sqlfluff lint \$(git diff origin/main --name-only | grep -E '(^snowflake_dbt/models.*[.]sql$)' | sed 's/snowflake_dbt\///g') --exclude-rules L009"
 # alias lint-dry="echo \$(git diff origin/main --name-only | grep -E '(^snowflake_dbt/models.*[.]sql$)' | sed 's/snowflake_dbt\///g')"
@@ -79,6 +80,7 @@ alias commit="git add . && git commit -m"
 alias diff="git diff"
 alias force="git push --force"
 alias nah="git clean -df && git reset --hard"
+alias oops="git reset --soft HEAD~1"
 alias pop="git stash pop"
 alias pull="git pull"
 alias push="git push"
@@ -92,6 +94,7 @@ alias gc="git go"
 alias gl="glo"
 alias gs="gss"
 alias ga="commit" # This is trickier to drop than I'd thought...
+alias gr="git recent -n 3"
 
 # Housekeeping
 

@@ -9,6 +9,7 @@ alias datagrip='open -a /Applications/DataGrip.app "`pwd`"'
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 alias c="clear"
 alias s="subl"
+wwc="npx cypress run --record --key a1ca458e-835e-4a2b-b4d1-fb125c1abc2d"
 
 # Navigation
 alias ..="cd .."
@@ -21,19 +22,20 @@ alias work="cd $HOME/Developer/netlify/data"
 alias sites="cd $HOME/Sites"
 
 # dbt
-alias dbt_reset="dbt clean && dbt deps && ../scripts/get_dbt_prod_artifacts.sh"
+alias dbt_reset="dbt clean && dbt deps && ../scripts/get_dbt_prod_artifacts.sh && dbt ls -s state:modified --resource-type model"
 alias dra="dbt_refresh; dbt_data_refresh"
 alias dras="dbt clean; dbt deps; ../scripts/get_dbt_prod_artifacts.sh"
-alias dl="dbt ls -m state:modified"
-alias dr="dbt run -m state:modified"
-alias drm="dbt run -m"
-alias dt="dbt test -m state:modified --exclude test_name:relationships test_name:equal_rowcount"
-alias dtm="dbt test --exclude test_name:relationships test_name:equal_rowcount -m"
+alias dl="dbt ls -s state:modified"
+alias dr="dbt run -s state:modified"
+alias drm="dbt run -s"
+alias dt="dbt test -m state:modified" # --exclude test_name:relationships test_name:equal_rowcount
+alias dtm="dbt test" # --exclude test_name:relationships test_name:equal_rowcount -m
+alias drt="dr && dt"
 alias get-pr-template="cat ~/Developer/netlify/data/.github/PULL_REQUEST_TEMPLATE/dbt_model_changes.md | pbcopy"
 
 # GitHub
 alias new-pr="gh pr create -a tnagengast --web -F ~/Developer/netlify/data/.github/PULL_REQUEST_TEMPLATE/dbt_model_changes.md"
-alias runs="gh run watch -R netlify/\$(basename $(git remote get-url origin) .git)"
+alias runs="gh run watch -R netlify/\$(basename \$(git remote get-url origin) .git)"
 # alias lint="sqlfluff lint \$(git diff origin/main --name-only | grep -E '(^snowflake_dbt/models.*[.]sql$)' | sed 's/snowflake_dbt\///g') --exclude-rules L009"
 # alias lint-dry="echo \$(git diff origin/main --name-only | grep -E '(^snowflake_dbt/models.*[.]sql$)' | sed 's/snowflake_dbt\///g')"
 
@@ -60,9 +62,10 @@ alias dbx="databricks"
 alias cp_dbx="mkd tmp; databricks workspace export_dir / ."
 
 # Laravel
-alias a="php artisan"
+alias art="php artisan"
 alias fresh="php artisan migrate:fresh --seed"
 alias seed="php artisan db:seed"
+alias pu="phpunit"
 
 # PHP
 alias cfresh="rm -rf vendor/ composer.lock && composer i"

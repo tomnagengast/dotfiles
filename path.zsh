@@ -1,5 +1,10 @@
-# If you come from bash you might have to change your $PATH.
+export DBT_ARTIFACT_STATE_PATH=target/prod/
+export DBT_DEFER_TO_STATE=true
+# export DBT_CLOUD_API_KEY="" # set it .gitignored file
+
+
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PYENV_ROOT="$HOME/.pyenv"
 
 # Load Composer tools
 export PATH="$PATH:$HOME/.composer/vendor/bin"
@@ -15,7 +20,9 @@ export PATH="$PATH:/Applications/Sublime Text.app/Contents/SharedSupport/bin"
 export PATH="$PATH:node_modules/.bin:vendor/bin"
 export PATH="$PATH:/usr/local/sbin"
 export PATH="$PATH:/usr/local/opt/mysql-client/bin"
-
+# pyenv
+export PATH="$(pyenv root)/shims:$PATH"
+export PATH="$PATH:$PYENV_ROOT/bin"
 # added by Snowflake SnowSQL installer v1.2
 export PATH="$PATH:/Applications/SnowSQL.app/Contents/MacOS"
 
@@ -23,6 +30,3 @@ export PATH="$PATH:/Applications/SnowSQL.app/Contents/MacOS"
 export CLOUDSDK_PYTHON="$(brew --prefix)/opt/python@3.8/libexec/bin/python"
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-
-export DBT_ARTIFACT_STATE_PATH=target/prod/
-export DBT_DEFER_TO_STATE=true

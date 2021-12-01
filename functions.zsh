@@ -52,8 +52,6 @@ function tre() {
 	tree -aC -I '.git|node_modules|vendor' --dirsfirst "$@" | less -FRNX;
 }
 
-
-
 function new_local_python() (
 	if [ $# -eq 0 ]
 	then

@@ -65,20 +65,25 @@ function new_local_python() (
 	pyenv versions
 )
 
-function lint() {
+function sqllint() {
 	if [ $# -eq 0 ]
 	then
 		echo 'Linting modified models...'
 		sqlfluff lint $(git diff origin/main --name-only | grep -E '(^snowflake_dbt/models.*[.]sql$)' | sed 's/snowflake_dbt\///g') --exclude-rules L009
 	else
-		# if [ $1 == "a" ] || [$1 == "all" ]
-		# then
-		# 	echo "Linting all models..."
-			# sqlfluff lint
-		# else
 		echo "Linting models: $@"
 		sqlfluff lint $@ --exclude-rules L009
-		# fi;
+	fi;
+}
+
+function sqlfix() {
+	if [ $# -eq 0 ]
+	then
+		echo 'Fixing modified models...'
+		sqlfluff fix $(git diff origin/main --name-only | grep -E '(^snowflake_dbt/models.*[.]sql$)' | sed 's/snowflake_dbt\///g') --exclude-rules L009
+	else
+		echo "Fixing models: $@"
+		sqlfluff fix $@ --exclude-rules L009
 	fi;
 }
 

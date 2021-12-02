@@ -32,6 +32,7 @@ alias dt="dbt test -m state:modified" # --exclude test_name:relationships test_n
 alias dtm="dbt test" # --exclude test_name:relationships test_name:equal_rowcount -m
 alias drt="dr && dt"
 alias get-pr-template="cat ~/Developer/netlify/data/.github/PULL_REQUEST_TEMPLATE/dbt_model_changes.md | pbcopy"
+alias 2xl="DBT_PROFILE_WAREHOUSE=transforming_2xl"
 
 # GitHub
 alias new-pr="gh pr create -a tnagengast --web -F ~/Developer/netlify/data/.github/PULL_REQUEST_TEMPLATE/dbt_model_changes.md"

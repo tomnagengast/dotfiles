@@ -24,6 +24,7 @@ brew 'pyenv' # https://opensource.com/article/19/5/python-3-default-mac
 brew 'pyenv-virtualenv'
 brew 'svn'
 brew 'terminal-notifier'
+brew 'thefuck'
 brew 'tldr'
 brew 'trash' # Manage the Trash bin
 brew 'tree' # List directories in a tree structure

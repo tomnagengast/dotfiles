@@ -22,6 +22,7 @@ brew 'mysql-client'
 brew 'pipx'
 brew 'pyenv' # https://opensource.com/article/19/5/python-3-default-mac
 brew 'pyenv-virtualenv'
+brew 'ripgrep'
 brew 'svn'
 brew 'terminal-notifier'
 brew 'thefuck'

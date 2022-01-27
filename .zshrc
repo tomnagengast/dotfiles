@@ -66,6 +66,8 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 compinit -i
-eval 
+eval
 TWILIO_AC_ZSH_SETUP_PATH=/Users/thomasnagengast/.twilio-cli/autocomplete/zsh_setup && test -f $TWILIO_AC_ZSH_SETUP_PATH && source $TWILIO_AC_ZSH_SETUP_PATH; # twilio autocomplete setup
 eval $(thefuck --alias)
+
+export PATH="$HOME/.poetry/bin:$PATH"

@@ -3,6 +3,7 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
+tap 'hashicorp/tap'
 
 # Binaries
 brew 'bash' # Latest Bash version
@@ -25,6 +26,7 @@ brew 'pyenv-virtualenv'
 brew 'ripgrep' # https://ddbeck.com/better-than-grep-for-writers/
 brew 'svn'
 brew 'terminal-notifier'
+brew 'hashicorp/tap/terraform'
 brew 'thefuck'
 brew 'tldr'
 brew 'trash' # Manage the Trash bin

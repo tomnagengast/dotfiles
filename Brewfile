@@ -29,6 +29,7 @@ brew 'thefuck'
 brew 'tldr'
 brew 'trash' # Manage the Trash bin
 brew 'tree' # List directories in a tree structure
+brew 'wget'
 brew 'youtube-dl'
 brew 'zlib'
 

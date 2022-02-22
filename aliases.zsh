@@ -18,7 +18,7 @@ alias ....="cd ../../.."
 
 # Directories
 alias library="cd $HOME/Library"
-alias work="cd $HOME/Developer/netlify/data"
+alias work="cd $HOME/Developer/replicatedhq"
 alias sites="cd $HOME/Sites"
 
 # dbt

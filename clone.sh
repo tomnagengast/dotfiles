@@ -1,9 +1,9 @@
 #!/bin/sh
 
-echo "Cloning repositories..."
+# echo "Cloning repositories..."
 
-SITES=$HOME/Sites
-WORK=$HOME/Work
+# SITES=$HOME/Sites
+# WORK=$HOME/Work
 
 # Personal
 # git clone git@github.com:driesvints/checklists.git $SITES/checklists

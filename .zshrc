@@ -1,4 +1,8 @@
 # Path to your dotfiles.
+
+# fpath+=/opt/homebrew/share/zsh
+fpath+=/opt/homebrew/share/zsh/site-functions
+
 export DOTFILES=$HOME/.dotfiles
 
 # Path to your oh-my-zsh installation.
@@ -38,7 +42,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Load Pure iTerm theme
 autoload -U promptinit; promptinit
-prompt pure
 export PURE_PROMPT_SYMBOL="❯" # or $ ❯ ✨ ⚡️
 export PURE_GIT_DOWN_ARROW="⇵" # ⇣ ⋌ 👾
 export PURE_GIT_UP_ARROW="⇵" # ⇡ ⋋  🚀
@@ -47,6 +50,7 @@ zstyle :prompt:pure:git:branch color black
 zstyle :prompt:pure:git:dirty color black
 zstyle :prompt:pure:prompt:continuation color black
 zstyle :prompt:pure:prompt:success color cyan
+prompt pure
 
 
 export LC_ALL=en_US.UTF-8
@@ -66,7 +70,7 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 compinit -i
-eval TWILIO_AC_ZSH_SETUP_PATH=/Users/thomasnagengast/.twilio-cli/autocomplete/zsh_setup && test -f $TWILIO_AC_ZSH_SETUP_PATH && source $TWILIO_AC_ZSH_SETUP_PATH; # twilio autocomplete setup
+# eval TWILIO_AC_ZSH_SETUP_PATH=/Users/thomasnagengast/.twilio-cli/autocomplete/zsh_setup && test -f $TWILIO_AC_ZSH_SETUP_PATH && source $TWILIO_AC_ZSH_SETUP_PATH; # twilio autocomplete setup
 eval $(thefuck --alias)
 
-export PATH="$HOME/.poetry/bin:$PATH"
+# export PATH="$HOME/.poetry/bin:$PATH"

@@ -66,6 +66,7 @@ cask 'obsidian'
 # cask 'phpstorm'
 # cask 'postgres' # fails: `Cask 'postgres' is unavailable: No Cask with this name exists.`
 cask 'pycharm'
+cask 'raycast'
 cask 'screenflow'
 cask 'slack'
 # cask 'snowflake-snowsql' # fails: `sudo softwareupdate --install-rosetta`
@@ -79,11 +80,11 @@ cask 'visual-studio-code'
 cask 'zoom'
 
 # Quicklook
-cask 'qlcolorcode'
-cask 'qlmarkdown'
-cask 'quicklook-json'
-cask 'quicklook-csv'
-cask 'qlstephen'
+# cask 'qlcolorcode'
+# cask 'qlmarkdown'
+# cask 'quicklook-json'
+# cask 'quicklook-csv'
+# cask 'qlstephen'
 
 # Fonts (requires svn)
 # cask 'font-lato'

@@ -69,7 +69,8 @@ function sqllint() {
 	if [ $# -eq 0 ]
 	then
 		echo 'Linting modified models...'
-		sqlfluff lint $(git diff origin/main --name-only | grep -E '(^snowflake_dbt/models.*[.]sql$)' | sed 's/snowflake_dbt\///g') --exclude-rules L009
+		files=$(git diff origin/main --name-only --diff-filter=ACMR | grep -E '(^models.*[.]sql$)' | tr '\n' ' ')
+		sqlfluff lint $(echo $files)
 	else
 		echo "Linting models: $@"
 		sqlfluff lint $@ --exclude-rules L009
@@ -80,7 +81,8 @@ function sqlfix() {
 	if [ $# -eq 0 ]
 	then
 		echo 'Fixing modified models...'
-		sqlfluff fix $(git diff origin/main --name-only | grep -E '(^snowflake_dbt/models.*[.]sql$)' | sed 's/snowflake_dbt\///g') --exclude-rules L009
+		files=$(git diff origin/main --name-only --diff-filter=ACMR | grep -E '(^models.*[.]sql$)' | tr '\n' ' ')
+		sqlfluff fix $(echo $files)
 	else
 		echo "Fixing models: $@"
 		sqlfluff fix $@ --exclude-rules L009

@@ -33,3 +33,6 @@ export PATH="$PATH:/Applications/SnowSQL.app/Contents/MacOS"
 # source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
 # source $HOME/.poetry/env
+export PATH="/opt/homebrew/opt/php@8.0/bin:$PATH"
+export PATH="/opt/homebrew/opt/php@8.0/sbin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"

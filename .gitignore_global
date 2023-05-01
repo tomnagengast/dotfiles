@@ -36,9 +36,14 @@
 ehthumbs.db
 Thumbs.db
 .idea/
+.fleet/
 .vscode
 .vagrant/
 
 # Local config files #
 ######################
 .python-version
+
+# Temporary indidual files #
+#############################
+dev_ignore

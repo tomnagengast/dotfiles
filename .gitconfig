@@ -137,9 +137,11 @@
 	forceSignAnnotated = false
 
 [user]
-	name = Tom Nagengast
+	name = tnagengast
 	email = tnagengast@gmail.com
 
 [core]
 	autocrlf = input
 	excludesfile = /Users/tomnagengast/.gitignore_global
+[init]
+	templateDir = /Users/tomnagengast/.git-template

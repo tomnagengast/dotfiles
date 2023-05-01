@@ -3,21 +3,30 @@
 echo "Setting up your Mac..."
 
 # Fix zsh permissions (https://github.com/ohmyzsh/ohmyzsh/issues/6835)
-# chmod 755 /usr/local/share/zsh
-# chmod 755 /usr/local/share/zsh/site-functions
+if [[ $(uname -m) == 'arm64' ]]; then
+  echo M1
+  chmod 755 /opt/homebrew/share/zsh
+  chmod 755 /opt/homebrew/share/zsh/site-functions
+fi
+if [[ $(uname -m) == 'i386' ]]; then
+  echo Intel
+  chmod 755 /usr/local/share/zsh
+  chmod 755 /usr/local/share/zsh/site-functions
+fi
 
-# M1
-# chmod 755 /opt/homebrew/share/zsh
-# chmod 755 /opt/homebrew/share/zsh/site-functions
+
 
 
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 # https://stackoverflow.com/questions/36657321/after-installing-homebrew-i-get-zsh-command-not-found-brew
-export PATH=/opt/homebrew/bin:$PATH
+# export PATH=/opt/homebrew/bin:$PATH
+# export PATH=/usr/local/bin/brew:$PATH
+chmod 755 /usr/local/share/zsh
+chmod 755 /usr/local/share/zsh/site-functions
 
 # Update Homebrew recipes
 brew update
@@ -50,6 +59,7 @@ mkdir $HOME/Developer
 rm -rf $HOME/.zshrc
 ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 ln -s $HOME/.dotfiles/.gitignore_global $HOME/.gitignore_global
+ln -s $HOME/.dotfiles/.vimrc $HOME/.vimrc
 
 # Symlink the Mackup config file to the home directory
 # ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg

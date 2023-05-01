@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if [ ! -d ~/.config/nvim ] ; then
+
+    rm -rf $HOME/.config/nvim
+    ln -s $HOME/.dotfiles/.config/nvim $HOME/.config/nvim
+
+fi

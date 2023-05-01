@@ -67,7 +67,7 @@ function new_local_python() (
 function lints() {
   if [ $# -eq 0 ]; then
     echo 'Linting modified models...'
-    files=$(git diff origin/main --name-only --diff-filter=ACMR | grep -E '(^models.*[.]sql$)' | tr '\n' ' ')
+    files=$(git diff origin/main --name-only --diff-filter=ACMR | grep -E '(^dbt/models.*[.]sql$)' | cut -d'/' -f2- | tr '\n' ' ')
     echo $files | tr ' ' '\n'
     sqlfluff lint $(echo $files)
   else
@@ -79,7 +79,7 @@ function lints() {
 function fixs() {
   if [ $# -eq 0 ]; then
     echo 'Fixing modified models...'
-    files=$(git diff origin/main --name-only --diff-filter=ACMR | grep -E '(^models.*[.]sql$)' | tr '\n' ' ')
+    files=$(git diff origin/main --name-only --diff-filter=ACMR | grep -E '(^models.*[.]sql$)' | cut -d'/' -f2- | tr '\n' ' ')
     sqlfluff fix $(echo $files)
   else
     echo "Fixing models: $@"

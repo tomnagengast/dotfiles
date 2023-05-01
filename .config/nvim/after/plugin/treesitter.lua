@@ -23,4 +23,3 @@ require'nvim-treesitter.configs'.setup {
     use_languagetree = true,
   },
 }
-

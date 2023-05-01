@@ -31,7 +31,10 @@ lsp.configure('lua_ls', {
             diagnostics = {
                 globals = { 'vim' }
             }
-        }
+        },
+        yamlls = {
+            keyOrdering = false,
+        },
     }
 })
 

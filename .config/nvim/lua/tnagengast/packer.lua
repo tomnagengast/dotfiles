@@ -58,6 +58,9 @@ return require('packer').startup(function(use)
     -- https://github.com/pdrmnvd/dbtpal
     -- use('pdrmnvd/dbtpal')
 
+    -- https://github.com/iamcco/markdown-preview.nvim
+    -- use('iamcco/markdown-preview.nvim')
+
     -- https://github.com/VonHeikemen/lsp-zero.nvim
     use {
         'VonHeikemen/lsp-zero.nvim',

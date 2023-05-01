@@ -32,7 +32,12 @@ lsp.configure('lua_ls', {
                 globals = { 'vim' }
             }
         },
-        yamlls = {
+    }
+})
+
+lsp.configure('yamlls', {
+    settings = {
+        yaml = {
             keyOrdering = false,
         },
     }

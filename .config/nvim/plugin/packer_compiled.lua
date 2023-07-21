@@ -144,6 +144,18 @@ _G.packer_plugins = {
     path = "/Users/tomnagengast/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["neoscroll.nvim"] = {
+    config = { "\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14neoscroll\frequire\0" },
+    loaded = true,
+    path = "/Users/tomnagengast/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
+    url = "https://github.com/karb94/neoscroll.nvim"
+  },
+  ["nvim-autopairs"] = {
+    config = { "\27LJ\2\n<\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
+    loaded = true,
+    path = "/Users/tomnagengast/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/tomnagengast/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -179,6 +191,12 @@ _G.packer_plugins = {
     path = "/Users/tomnagengast/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
   },
+  ["splitjoin.vim"] = {
+    config = { "\27LJ\2\n¨\1\0\0\2\0\5\0\r6\0\0\0009\0\1\0)\1\1\0=\1\2\0006\0\0\0009\0\1\0)\1\1\0=\1\3\0006\0\0\0009\0\1\0)\1\1\0=\1\4\0K\0\1\0$splitjoin_php_method_chain_full\29splitjoin_trailing_comma2splitjoin_html_attributes_bracket_on_new_line\6g\bvim\0" },
+    loaded = true,
+    path = "/Users/tomnagengast/.local/share/nvim/site/pack/packer/start/splitjoin.vim",
+    url = "https://github.com/AndrewRadev/splitjoin.vim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/tomnagengast/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -198,10 +216,32 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/tomnagengast/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-pasta"] = {
+    config = { "\27LJ\2\nG\0\0\2\0\4\0\0056\0\0\0009\0\1\0005\1\3\0=\1\2\0K\0\1\0\1\2\0\0\rfugitive\29pasta_disabled_filetypes\6g\bvim\0" },
+    loaded = true,
+    path = "/Users/tomnagengast/.local/share/nvim/site/pack/packer/start/vim-pasta",
+    url = "https://github.com/sickill/vim-pasta"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: neoscroll.nvim
+time([[Config for neoscroll.nvim]], true)
+try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14neoscroll\frequire\0", "config", "neoscroll.nvim")
+time([[Config for neoscroll.nvim]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+try_loadstring("\27LJ\2\n<\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
+time([[Config for nvim-autopairs]], false)
+-- Config for: vim-pasta
+time([[Config for vim-pasta]], true)
+try_loadstring("\27LJ\2\nG\0\0\2\0\4\0\0056\0\0\0009\0\1\0005\1\3\0=\1\2\0K\0\1\0\1\2\0\0\rfugitive\29pasta_disabled_filetypes\6g\bvim\0", "config", "vim-pasta")
+time([[Config for vim-pasta]], false)
+-- Config for: splitjoin.vim
+time([[Config for splitjoin.vim]], true)
+try_loadstring("\27LJ\2\n¨\1\0\0\2\0\5\0\r6\0\0\0009\0\1\0)\1\1\0=\1\2\0006\0\0\0009\0\1\0)\1\1\0=\1\3\0006\0\0\0009\0\1\0)\1\1\0=\1\4\0K\0\1\0$splitjoin_php_method_chain_full\29splitjoin_trailing_comma2splitjoin_html_attributes_bracket_on_new_line\6g\bvim\0", "config", "splitjoin.vim")
+time([[Config for splitjoin.vim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

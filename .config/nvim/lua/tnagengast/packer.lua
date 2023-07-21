@@ -1,5 +1,6 @@
 -- https://laracasts.com/series/neovim-as-a-php-ide/episodes/11
 -- https://github.com/ThePrimeagen/init.lua/blob/master/lua/theprimeagen/packer.lua
+-- https://github.com/jessarcher/dotfiles/blob/master/nvim/lua/user/plugins.lua
 
 local ensure_packer = function()
     local fn = vim.fn
@@ -66,7 +67,51 @@ use("laytan/cloak.nvim")
 
 -- use('iamcco/markdown-preview.nvim')
 
--- https://github.com/VonHeikemen/lsp-zero.nvim
+-- Change working directory to the project root
+-- use({
+--     'airblade/vim-rooter',
+--     setup = function()
+--         vim.g.rooter_manual_only = 1
+--     end,
+--     config = function()
+--         vim.cmd("Rooter")
+--     end
+-- })
+
+-- Add matching quotes, parens, etc.
+use({
+    'windwp/nvim-autopairs',
+    config = function()
+        require('nvim-autopairs').setup()
+    end
+})
+
+-- Add animation while jumping pages with <C-d> and <C-u>.
+-- use({
+--     'karb94/neoscroll.nvim',
+--     config = function()
+--         require('neoscroll').setup()
+--     end
+-- })
+
+-- Split arrays and methods on multiple lines, or join them back up.
+use({
+    'AndrewRadev/splitjoin.vim',
+    config = function()
+        vim.g.splitjoin_html_attributes_bracket_on_new_line = 1
+        vim.g.splitjoin_trailing_comma = 1
+        vim.g.splitjoin_php_method_chain_full = 1
+    end
+})
+
+-- Automatically fix indentation when pasting code.
+use({
+    'sickill/vim-pasta',
+    config = function()
+        vim.g.pasta_disabled_filetypes = {'fugitive'}
+    end
+})
+
 use({
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v1.x',

@@ -4,6 +4,7 @@ alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 alias ll='ls -alF'
 alias s="subl"
 alias vim="nvim"
+alias h="history | tail -n 50"
 
 # Navigation
 alias ..="cd .."
@@ -15,9 +16,11 @@ alias dfz="vim $HOME/.dotfiles/zshrc.zsh"
 
 # Directories
 alias work="cd $HOME/code/replicatedhq/data"
+alias me="cd $HOME/code/tnagengast"
 
 # dbt
-alias drefresh="../etc/clone-snowflake.py && ../etc/get-dbt-state.py && dbt build -s state:modified"
+alias dre="../etc/get-dbt-state.py && dbt build -s state:modified"
+alias drefresh="dbt run-operation clone_schema && dre"
 alias dl="dbt ls -s state:modified"
 alias dr="dbt run -s state:modified"
 alias drm="dbt run -s"
@@ -29,7 +32,7 @@ alias dt="dbt test -m state:modified"
 alias dtm="dbt test"
 alias drt="dr && dt"
 alias 2xl="DBT_PROFILE_WAREHOUSE=transforming_2xl"
-alias lkml="./dbt_lookml/run.py"
+alias lr="./dbt_lookml/run.py"
 
 # GitHub
 alias mg="git merge origin main"
@@ -79,3 +82,8 @@ alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && 
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 alias path='echo -e ${PATH//:/\\n}'
 alias ec2="ssh -i ~/.ssh/aws/data-team.pem ubuntu@ec2-35-86-236-3.us-west-2.compute.amazonaws.com"
+alias ec="ssh -i ~/.ssh/aws/data-team.pem"
+alias ec20="ssh -i ~/.ssh/aws/data-team.pem ubuntu@18.237.193.74"
+alias ec21="ssh -i ~/.ssh/aws/data-team.pem ubuntu@34.222.72.219"
+alias ec22="ssh -i ~/.ssh/aws/data-team.pem ubuntu@35.90.177.245"
+

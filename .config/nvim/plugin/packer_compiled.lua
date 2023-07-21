@@ -114,16 +114,15 @@ _G.packer_plugins = {
     path = "/Users/tomnagengast/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
+  ["data-tools.nvim"] = {
+    loaded = true,
+    path = "/Users/tomnagengast/.local/share/nvim/site/pack/packer/start/data-tools.nvim",
+    url = "/Users/tomnagengast/code/tnagengast/data-tools.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/tomnagengast/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
-  },
-  ["github-nvim-theme"] = {
-    config = { "\27LJ\2\nZ\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\16theme_style\17dark_default\nsetup\17github-theme\frequire\0" },
-    loaded = true,
-    path = "/Users/tomnagengast/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
-    url = "https://github.com/projekt0n/github-nvim-theme"
   },
   harpoon = {
     loaded = true,
@@ -175,6 +174,11 @@ _G.packer_plugins = {
     path = "/Users/tomnagengast/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["rose-pine"] = {
+    loaded = true,
+    path = "/Users/tomnagengast/.local/share/nvim/site/pack/packer/start/rose-pine",
+    url = "https://github.com/rose-pine/neovim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/tomnagengast/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -190,11 +194,6 @@ _G.packer_plugins = {
     path = "/Users/tomnagengast/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
   },
-  ["vim-dadbod"] = {
-    loaded = true,
-    path = "/Users/tomnagengast/.local/share/nvim/site/pack/packer/start/vim-dadbod",
-    url = "https://github.com/tpope/vim-dadbod"
-  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/tomnagengast/.local/share/nvim/site/pack/packer/start/vim-fugitive",
@@ -203,10 +202,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: github-nvim-theme
-time([[Config for github-nvim-theme]], true)
-try_loadstring("\27LJ\2\nZ\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\16theme_style\17dark_default\nsetup\17github-theme\frequire\0", "config", "github-nvim-theme")
-time([[Config for github-nvim-theme]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

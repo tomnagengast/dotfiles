@@ -1,7 +1,8 @@
-export DBT_ARTIFACT_STATE_PATH=target/prod/
-export DBT_DEFER_TO_STATE=true
+export DBT_STATE=target/prod/
+export DBT_DEFER=true
 export DBT_CLOUD_ACCOUNT_ID=26191
 export DBT_CLOUD_PROJECT_ID=163465
+# export DATAFOLD_API_KEY=abgdHBgaXjgj8hf7bKiMMaOBYKEzw34QJjktAuDp
 # export DBT_CLOUD_API_KEY="" # set it .gitignored file
 
 export PATH=/opt/homebrew/bin:$PATH

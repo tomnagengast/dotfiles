@@ -12,8 +12,6 @@ fpath+=/opt/homebrew/share/zsh
 fpath+=/opt/homebrew/share/zsh/site-functions
 autoload -Uz compinit && compinit
 
-ZSH_THEME=""
-
 # Uncomment the following line to automatically update without prompting.
 DISABLE_UPDATE_PROMPT="true"
 
@@ -35,19 +33,26 @@ plugins=(
     web-search
 )
 
+# Load oh-my-zsh
+# ZSH_THEME="robbyrussell"
 source $ZSH/oh-my-zsh.sh
 
 # Load Pure iTerm theme
 autoload -U promptinit; promptinit
-export PURE_PROMPT_SYMBOL="❯" # or $ ❯ ✨ ⚡️
-export PURE_GIT_DOWN_ARROW="⇵" # ⇣ ⋌ 👾
-export PURE_GIT_UP_ARROW="⇵" # ⇡ ⋋  🚀
-export PURE_GIT_STASH_SYMBOL="≡" #  👻
-zstyle :prompt:pure:git:branch color white
-zstyle :prompt:pure:git:dirty color orange
-zstyle :prompt:pure:prompt:continuation color orange
-zstyle :prompt:pure:prompt:success color cyan
+# export PURE_PROMPT_SYMBOL="❯" # or $ ❯ ✨ ⚡️
+# export PURE_GIT_DOWN_ARROW="⇵" # ⇣ ⋌ 👾
+# export PURE_GIT_UP_ARROW="⇵" # ⇡ ⋋  🚀
+# export PURE_GIT_STASH_SYMBOL="≡" #  👻
+# https://github.com/sindresorhus/pure
+# https://rosepinetheme.com/palette
+zstyle :prompt:pure:git:branch color '#56526e'
+zstyle :prompt:pure:git:dirty color '#56526e'
+zstyle :prompt:pure:path color green
+zstyle ':prompt:pure:prompt:*' color cyan
+zstyle :prompt:pure:prompt:continuation color cyan
+zstyle :prompt:pure:virtualenv color cyan
 prompt pure
+
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -86,3 +91,6 @@ export CFLAGS="-L $(xcrun --show-sdk-path)/usr/include -L brew --prefix bzip2/in
 
 # eksctl completion
 fpath+=($fpath ~/.zsh/completion)
+
+# krew path
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"

@@ -35,10 +35,11 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
-.idea/
-.fleet/
+.idea
+.fleet
 .vscode
-.vagrant/
+.vagrant
+__pycache__
 
 # Local config files #
 ######################
@@ -47,3 +48,4 @@ Thumbs.db
 # Temporary indidual files #
 #############################
 dev_ignore
+.dev

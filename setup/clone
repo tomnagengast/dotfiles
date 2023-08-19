@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+echo "Cloning repositories..."
+
+personal=$HOME/Sites
+work=$HOME/Work
+
+# Personal
+# git clone git@github.com:driesvints/checklists.git $personal/checklists
+
+# Work
+# git clone git@github.com:blade-ui-kit/art.git $work/art

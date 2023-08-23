@@ -1,40 +1,39 @@
-export PATH=/opt/homebrew/bin:$PATH
+pathadd() {
+    if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+        PATH="${PATH:+"$PATH:"}$1"
+    fi
+}
 
 # Use project specific binaries before global ones
-export PATH="$PATH:$HOME/.local/bin"
-export PATH="$PATH:/usr/local/bin"
-export PATH="$PATH:/usr/local/sbin"
+pathadd "$HOME/.local/bin"
+pathadd /usr/local/bin
+pathadd /usr/local/sbin
+
+# Homebrew
+pathadd /opt/homebrew/bin
 
 # Composer
-export PATH="$PATH:$HOME/.composer/vendor/bin"
-export PATH="$PATH:vendor/bin"
+pathadd $HOME/.composer/vendor/bin
+pathadd vendor/bin
 
 # Node
-export PATH="$PATH:$HOME/.node/bin"
-export PATH="$PATH:node_modules/.bin"
+pathadd $HOME/.node/bin
+pathadd node_modules/.bin
 
 # Bun
-export PATH="$PATH:$BUN_INSTALL/bin"
+pathadd $BUN_INSTALL/bin
 
 # pyenv
-export PATH="$(pyenv root)/shims:$PATH"
-export PATH="$PATH:$PYENV_ROOT/bin"
+pathadd $(pyenv root)/shims
+pathadd $PYENV_ROOT/bin
 
 # Rust
-export PATH="$PATH:$HOME/.cargo/env"
-
-# Applications
+pathadd $HOME/.cargo/env
 
 # Herd
-export PATH="/Users/tomnagengast/Library/Application Support/Herd/bin/":$PATH
+pathadd /Users/tomnagengast/Library/Application Support/Herd/bin
 
 # Snowflake
-export PATH="$PATH:/Applications/SnowSQL.app/Contents/MacOS"
-export PATH="$PATH:/Applications/Sublime Text.app/Contents/SharedSupport/bin"
-export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
-
-# dbt
-export DBT_STATE=target/prod/
-export DBT_DEFER=true
-export DBT_CLOUD_ACCOUNT_ID=
-export DBT_CLOUD_PROJECT_ID=
+pathadd /Applications/SnowSQL.app/Contents/MacOS
+pathadd /Applications/Sublime Text.app/Contents/SharedSupport/bin
+pathadd /Applications/Postgres.app/Contents/Versions/latest/bin

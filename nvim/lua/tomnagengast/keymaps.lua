@@ -55,7 +55,8 @@ vim.keymap.set("n", "N", "Nzzzv") -- keep cursor in the middle of the screen whe
 vim.keymap.set("i", "jj", "<Esc>")
 
 vim.keymap.set("n", "Q", "<nop>") -- disable ex mode
-vim.keymap.set("n", "<leader>F", vim.lsp.buf.format) -- change the languages format of the file
+-- vim.keymap.set("n", "<leader>F", vim.lsp.buf.format) -- change the languages format of the file
+vim.keymap.set("n", "<leader>F", ":silent !tmux neww t<CR>") -- change the languages format of the file
 
 -- quickfix list navigation
 -- vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
@@ -79,5 +80,4 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 --     require('data-tools')
 --     vim.cmd("DTSelectStatement")
 -- end)
-
 

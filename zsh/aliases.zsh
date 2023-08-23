@@ -29,7 +29,7 @@ alias dtm="dbt test"
 alias npr="cpsc && gh pr create --web --label 'type::feature' -F ~/code/replicatedhq/__templates/dbt_pr.md"
 alias cpb="git branch | sed -n -e 's/^\* \(.*\)/\1/p' | pbcopy"
 alias lpr="cat ~/code/replicatedhq/__templates/dbt_pr.md | pbcopy"
-alias runs="gh run watch -R replicatedhq/\$(basename \$(git remote get-url origin) .git)"
+alias runs="gh run watch -R \$(git remote get-url origin | sed -E 's|.*github\.com[:/](.+/[^/]+)\.git|\1|') .git)"
 
 # Snowflake
 alias snowsql=/Applications/SnowSQL.app/Contents/MacOS/snowsql
@@ -37,6 +37,7 @@ alias snf=snowsql
 
 # Laravel
 alias art="php artisan"
+alias fresh="php artisan migrate:fresh --seed"
 
 # Git
 alias clean-local-branches='git branch | grep -v "main" | xargs git branch -D'
@@ -68,3 +69,4 @@ alias localip="ipconfig getifaddr en0"
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 alias path='echo -e ${PATH//:/\\n}'
+

@@ -1,9 +1,10 @@
 #!/usr/bin/env sh
-
+# unset PATH
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 # Zsh
 ln -sf $DOTFILES/zsh/zshrc $HOME/.zshrc
+ln -sf $DOTFILES/zsh/zprofile $HOME/.zprofile
 
 ln -sf $DOTFILES/mackup/mackup.cfg $HOME/.mackup.cfg
 
@@ -30,3 +31,4 @@ mkdir -p $HOME/.nvm
 ln -sf $DOTFILES/nvm/default-packages $HOME/.nvm/default-packages
 
 zsh
+

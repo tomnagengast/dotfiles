@@ -3,6 +3,7 @@
 echo "Setting up your Mac..."
 
 # Zsh
+chmod 755 /opt/homebrew/share
 chmod 755 /opt/homebrew/share/zsh
 chmod 755 /opt/homebrew/share/zsh/site-functions
 
@@ -12,11 +13,15 @@ if test ! $(which brew); then
 fi
 brew update
 brew tap homebrew/bundle
-brew bundle
+brew bundle --file=~/dotfiles/homebrew/Brewfile
 
 # Oh My Zsh
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
     KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
+if test ! $(which nvm); then
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 fi
 
 # Install Pure iTerm theme
@@ -25,13 +30,12 @@ npm install --global pure-prompt # /usr/local/bin/npm
 mkdir -p $HOME/.local/bin
 mkdir -p $HOME/.config
 mkdir -p $HOME/personal
-mkdir -p $HOME/work
 
 # Copy for SanFranciso font
 cp /System/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/*.otf ~/Library/Fonts
 
-./clone
-./install
+./setup/clone
+./setup/install
 
 # Set macOS preferences - reloads the shell
-source .macos
+source ./setup/macos

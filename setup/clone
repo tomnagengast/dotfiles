@@ -2,8 +2,8 @@
 
 echo "Cloning repositories..."
 
-personal=$HOME/Sites
-work=$HOME/Work
+personal=$HOME/personal
+# work=$HOME/work
 
 # Personal
 # git clone git@github.com:driesvints/checklists.git $personal/checklists

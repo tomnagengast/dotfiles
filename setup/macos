@@ -151,8 +151,8 @@ defaults write com.apple.dock autohide-delay -float 0
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
-# Don’t show recent applications in Dock
-defaults write com.apple.dock show-recents -bool false
+# # Don’t show recent applications in Dock
+# defaults write com.apple.dock show-recents -bool false
 
 # Reset Launchpad, but keep the desktop wallpaper intact
 find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
@@ -267,14 +267,12 @@ for app in "Activity Monitor" \
     "Contacts" \
     "Dock" \
     "Finder" \
-    "Google Chrome" \
     "Mail" \
     "Messages" \
     "Photos" \
     "Safari" \
     "SystemUIServer" \
     "Terminal" \
-    "Tweetbot" \
     "iCal"; do
     killall "${app}" &> /dev/null
 done

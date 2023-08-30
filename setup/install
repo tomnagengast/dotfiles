@@ -30,5 +30,9 @@ ln -sf $DOTFILES/scripts/t $HOME/.local/bin/t
 mkdir -p $HOME/.nvm
 ln -sf $DOTFILES/nvm/default-packages $HOME/.nvm/default-packages
 
+# dbt
+mkdir -p $HOME/.dbt
+ln -sf $DOTFILES/dbt/profiles.yml $HOME/.dbt/profiles.yml
+
 zsh
 

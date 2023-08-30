@@ -3,12 +3,14 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
+tap 'dbt-labs/dbt'
 tap 'hashicorp/tap'
 tap 'epk/epk'
 
 # Binaries
 brew 'bash' # Latest Bash version
 brew 'coreutils' # Those that come with macOS are outdated
+brew 'dbt-postgres'
 brew 'ffmpeg' # https://github.com/ZachNagengast/dotfiles/blob/master/brew-install.sh
 brew 'fzf'
 brew 'gh'

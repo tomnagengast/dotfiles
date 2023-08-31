@@ -4,7 +4,8 @@ DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 # Zsh
 ln -sf $DOTFILES/zsh/zshrc $HOME/.zshrc
-ln -sf $DOTFILES/zsh/zprofile $HOME/.zprofile
+ln -sf $dotfiles/zsh/zprofile $home/.zprofile
+ln -sf $dotfiles/zsh/zshenv $home/.zshenv
 
 ln -sf $DOTFILES/mackup/mackup.cfg $HOME/.mackup.cfg
 

@@ -19,6 +19,7 @@ brew 'git-recent'
 brew 'grep'
 brew 'httpie'
 brew 'jq'
+brew 'kind'
 brew 'kubectl'
 brew 'mackup'
 # brew 'mas' # Mac App Store manager

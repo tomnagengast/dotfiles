@@ -25,8 +25,13 @@ alias dbm="dbt build -s"
 alias dt="dbt test -m state:modified"
 alias dtm="dbt test"
 
+alias sf="sqlfmt"
+
+# Airflow
+alias comd="composer-dev"
+
 # GitHub
-alias npr="cpsc && gh pr create --web --label 'type::feature' -F ~/code/replicatedhq/__templates/dbt_pr.md"
+alias npr="gh pr create --web"
 alias cpb="git branch | sed -n -e 's/^\* \(.*\)/\1/p' | pbcopy"
 alias lpr="cat ~/code/replicatedhq/__templates/dbt_pr.md | pbcopy"
 alias runs="gh run watch -R \$(git remote get-url origin | sed -E 's|.*github\.com[:/](.+/[^/]+)\.git|\1|') .git)"
@@ -61,9 +66,10 @@ alias gr="git recent -n 5"
 alias sudo='sudo '
 
 # Utilities
+alias cleanpy="find . -type d -name '__pycache__' -exec rm -r {} +"
 alias cleands="find . -type f -name '*.DS_Store' -ls -delete"
 alias cleanbak="find . -type f -name '*.bak' -ls -delete"
-alias cleanup="cleands && cleanbak"
+alias cleanup="cleanpy && cleands && cleanbak"
 alias week='date +%V'
 alias localip="ipconfig getifaddr en0"
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"

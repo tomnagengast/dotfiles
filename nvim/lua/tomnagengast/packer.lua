@@ -24,7 +24,7 @@ require('packer').init({
 
 local use = require('packer').use
 
-use 'wbthomason/packer.nvim'
+use('wbthomason/packer.nvim')
 
 use({
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
@@ -47,11 +47,15 @@ use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
 use('nvim-treesitter/playground')
 
--- use('theprimeagen/harpoon')
+use {
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    requires = { {"nvim-lua/plenary.nvim"} }
+}
 
 -- use("theprimeagen/refactoring.nvim")
 
--- use('mbbill/undotree')
+use('mbbill/undotree')
 
 -- use('mg979/vim-visual-multi')
 
@@ -59,7 +63,7 @@ use('tpope/vim-commentary')
 
 -- use('tpope/vim-fugitive')
 
--- use('tpope/vim-dadbod')
+use('tpope/vim-dadbod')
 
 -- use('kristijanhusak/vim-dadbod-ui')
 
@@ -68,6 +72,10 @@ use('tpope/vim-commentary')
 use("github/copilot.vim")
 
 use("laytan/cloak.nvim")
+
+use('christoomey/vim-tmux-navigator')
+
+use ('jessarcher/vim-heritage')
 
 -- use('iamcco/markdown-preview.nvim')
 

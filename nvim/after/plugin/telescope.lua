@@ -22,8 +22,8 @@ require("telescope").setup({
 require('telescope').load_extension('fzf')
 require('telescope').load_extension('live_grep_args')
 
-vim.keymap.set('n', '<C-f>', builtin.find_files, {})
--- vim.keymap.set('n', '<C-f>', builtin.git_files, {})
+vim.keymap.set('n', '<leader><C-f>', builtin.find_files, {})
+vim.keymap.set('n', '<C-f>', builtin.git_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
 

@@ -30,6 +30,9 @@ pathadd $PYENV_ROOT/bin
 # Rust
 pathadd $HOME/.cargo/env
 
+# Go
+pathadd $HOME/go/bin
+
 # Herd
 pathadd /Users/tomnagengast/Library/Application Support/Herd/bin
 
@@ -37,3 +40,7 @@ pathadd /Users/tomnagengast/Library/Application Support/Herd/bin
 pathadd /Applications/SnowSQL.app/Contents/MacOS
 pathadd /Applications/Sublime Text.app/Contents/SharedSupport/bin
 pathadd /Applications/Postgres.app/Contents/Versions/latest/bin
+
+# Java
+pathadd $JAVA_HOME/bin # /opt/homebrew/opt/openjdk/bin
+

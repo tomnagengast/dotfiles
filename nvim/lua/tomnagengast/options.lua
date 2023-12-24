@@ -6,10 +6,10 @@ vim.opt.relativenumber = true -- set relative line numbers
 vim.opt.linespace = 3
 
 -- 4 space indents
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
+vim.opt.tabstop = 4
 
 vim.opt.smartindent = true
 
@@ -18,10 +18,12 @@ vim.opt.wrap = false -- :set nowrap or :set wrap
 vim.opt.wildmode = 'longest:full,full'
 vim.opt.title = true
 vim.opt.mouse = 'a'
+vim.opt.mousemoveevent = true -- Allow hovering in bufferline
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
+vim.opt.listchars = { tab = '▸ ', trail = '·' }
 vim.opt.fillchars:append({ eob = " " })
 
 vim.opt.splitbelow = true

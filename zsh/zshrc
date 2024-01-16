@@ -72,3 +72,7 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+
+
+# Herd injected PHP binary.
+export PATH="/Users/tomnagengast/Library/Application Support/Herd/bin/":$PATH

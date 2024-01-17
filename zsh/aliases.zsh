@@ -5,7 +5,7 @@ alias vim="nvim"
 alias h="history | tail -n 50"
 
 # SSH
-alias gogogogo="ssh -i ~/.ssh/replit -p 22 5dbe8df1-a623-4cc2-a30e-c954e2114be0@5dbe8df1-a623-4cc2-a30e-c954e2114be0-00-20lqwhdcc1630.kirk.replit.dev"
+alias gogogo="ssh -i ~/.ssh/replit -p 22 5dbe8df1-a623-4cc2-a30e-c954e2114be0@5dbe8df1-a623-4cc2-a30e-c954e2114be0-00-20lqwhdcc1630.kirk.replit.dev"
 
 # Navigation
 alias ..="cd .."

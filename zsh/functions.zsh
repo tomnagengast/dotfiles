@@ -22,6 +22,10 @@ function git() {
   fi
 }
 
+function ggo() {
+  git checkout -b "$1" 2> /dev/null || git checkout "$1"
+}
+
 function uturn() {
   local current_repo=$(git rev-parse --show-toplevel)
   local current_branch=$(git rev-parse --abbrev-ref HEAD)
@@ -103,4 +107,9 @@ function new_local_python() (
   pip install -U pip
   pyenv versions
 )
+
+gen_model() {
+    model_names_json=$(printf '"%s",' "$@" | sed 's/,$//')
+    dbt run-operation generate_model_yaml --args "{\"model_names\": [$model_names_json]}"
+}
 

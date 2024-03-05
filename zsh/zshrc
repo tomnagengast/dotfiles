@@ -76,3 +76,4 @@ esac
 
 # Herd injected PHP binary.
 export PATH="/Users/tomnagengast/Library/Application Support/Herd/bin/":$PATH
+. "$HOME/.cargo/env"

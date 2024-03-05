@@ -5,7 +5,7 @@ pathadd() {
 }
 
 # Use project specific binaries before global ones
-pathadd "$HOME/.local/bin"
+pathadd $HOME/.local/bin
 pathadd /usr/local/bin
 pathadd /usr/local/sbin
 
@@ -29,6 +29,7 @@ pathadd $PYENV_ROOT/bin
 
 # Rust
 pathadd $HOME/.cargo/env
+pathadd $HOME/.cargo/bin
 
 # Go
 pathadd $HOME/go/bin

@@ -9,8 +9,10 @@ tap 'epk/epk'
 
 # Binaries
 brew 'bash' # Latest Bash version
+brew 'bat'
 brew 'coreutils' # Those that come with macOS are outdated
 brew 'dbt-postgres'
+brew 'jakehilborn/jakehilborn/displayplacer'
 brew 'duckdb'
 brew 'ffmpeg' # https://github.com/ZachNagengast/dotfiles/blob/master/brew-install.sh
 brew 'fzf'
@@ -19,6 +21,7 @@ brew 'git-recent'
 brew 'grep'
 brew 'httpie'
 brew 'jq'
+brew 'lsd'
 brew 'yq'
 brew 'k9s'
 brew 'kind'
@@ -97,3 +100,4 @@ cask 'font-source-serif-pro'
 # mas 'BetterSnapTool', id: 417375580
 # mas 'Microsoft Outlook', id: 985367838
 # mas 'Microsoft Excel', id: 462058435
+

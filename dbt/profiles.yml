@@ -4,25 +4,25 @@ replit:
     dev:
       type: bigquery
       project: replit-analytics
-      dataset: dev_tom
+      dataset: "{{ env_var('TARGET_SCHEMA', 'dev_tom') }}"
       location: US
       threads: 25
       job_execution_timeout_seconds: 300
       job_retries: 1
       method: oauth
       # method: service-account
-      # keyfile: /Users/tomnagengast/.config/gcloud/replit-analytics-service-account-data-platform-staging.json
+      # keyfile: /Users/tomnagengast/.config/gcloud/data-platform-staging@replit-analytics.iam.gserviceaccount.com.json
     staging:
       type: bigquery
       project: replit-analytics-dev
-      dataset: PR_35
+      dataset: "{{ env_var('TARGET_SCHEMA', 'PR_119') }}"
       location: US
       threads: 25
       job_execution_timeout_seconds: 300
       job_retries: 1
-      # method: oauth
-      method: service-account
-      keyfile: /Users/tomnagengast/.config/gcloud/replit-analytics-service-account-data-platform-staging.json
+      method: oauth
+      # method: service-account
+      # keyfile: /Users/tomnagengast/.config/gcloud/data-platform-staging@replit-analytics.iam.gserviceaccount.com.json
     production:
       type: bigquery
       project: replit-analytics
@@ -33,4 +33,3 @@ replit:
       job_execution_timeout_seconds: 300
       job_retries: 1
       method: oauth
-

@@ -1,8 +1,6 @@
-alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
-alias ll='ls -alF'
-alias s="subl"
-alias vim="nvim"
-alias h="history | tail -n 50"
+# Override default commands
+alias cat="bat --plain"
+alias ls="lsd"
 
 # SSH
 alias gogogo="ssh -i ~/.ssh/replit -p 22 5dbe8df1-a623-4cc2-a30e-c954e2114be0@5dbe8df1-a623-4cc2-a30e-c954e2114be0-00-20lqwhdcc1630.kirk.replit.dev"
@@ -14,6 +12,14 @@ alias ....="cd ../../.."
 alias df="vim $HOME/dotfiles"
 alias dfa="vim $HOME/dotfiles/aliases.zsh"
 alias dfz="vim $HOME/dotfiles/zshrc.zsh"
+
+
+alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
+alias l='ls -1A --group-directories-first'
+alias ll='ls -1Al --header --group-directories-first'
+alias s="subl"
+alias vim="nvim"
+alias h="history | tail -n 50"
 
 # Directories
 alias work="cd $HOME/code/replicatedhq/data"
@@ -28,7 +34,9 @@ alias dbm="dbt build -s"
 alias dt="dbt test -m state:modified"
 alias dtm="dbt test"
 
-alias sf="sqlfmt"
+alias sf="sqlfmt && sqlfluff fix"
+alias ss="sqlfmt && sqlfluff lint"
+alias tf="terraform"
 
 # Airflow
 alias comd="composer-dev"
@@ -63,6 +71,7 @@ alias aye="git checkout"
 alias gl="glo"
 alias gs="gss"
 alias gr="git recent -n 5"
+alias ggo="g go"
 
 # Housekeeping
 # Enable aliases to be sudo’ed

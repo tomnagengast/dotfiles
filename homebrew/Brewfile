@@ -1,5 +1,4 @@
 # Taps
-tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
@@ -11,8 +10,8 @@ tap 'epk/epk'
 brew 'bash' # Latest Bash version
 brew 'bat'
 brew 'coreutils' # Those that come with macOS are outdated
-brew 'dbt-postgres'
 brew 'jakehilborn/jakehilborn/displayplacer'
+brew 'delta'
 brew 'duckdb'
 brew 'ffmpeg' # https://github.com/ZachNagengast/dotfiles/blob/master/brew-install.sh
 brew 'fzf'
@@ -30,52 +29,49 @@ brew 'mackup'
 brew 'neovim'
 brew 'pipx'
 brew 'pure'
-brew 'pyenv' # https://opensource.com/article/19/5/python-3-default-mac
-brew 'pyenv-virtualenv'
 brew 'ripgrep' # https://ddbeck.com/better-than-grep-for-writers/
 brew 'hashicorp/tap/terraform'
 brew 'tmux'
 brew 'trash' # Manage the Trash bin
 brew 'tree' # List directories in a tree structure
+# brew 'uv' # curl -LsSf https://astral.sh/uv/install.sh | sh
 brew 'wget'
 brew 'youtube-dl'
 brew 'zlib'
 
 # Development
-# brew 'r'
-# brew 'scala'
 brew 'java'
 
 # Apps
-cask '1password'
-cask '1password-cli'
-cask 'arc'
-# cask 'aerial'
-# cask 'bartender'
-cask 'cleanshot'
-cask 'copilot'
-cask 'dbngin'
-cask 'docker'
-cask 'figma'
-cask 'flyctl'
-cask 'font-sf-mono-nerd-font'
-cask 'herd'
-cask 'imageoptim'
-cask 'iina'
-cask 'iterm2'
-cask 'kitty'
-cask 'notion'
-cask 'obsidian'
-cask 'raycast'
-cask 'slack'
-# cask 'snowflake-snowsql' # fails: `sudo softwareupdate --install-rosetta`
-cask 'spotify'
-cask 'sublime-text'
-cask 'tableplus'
-cask 'telegram-desktop'
-cask 'the-unarchiver'
-cask 'visual-studio-code'
-cask 'zoom'
+# cask '1password'
+# cask '1password-cli'
+# cask 'arc'
+# # cask 'aerial'
+# # cask 'bartender'
+# cask 'cleanshot'
+# cask 'copilot'
+# cask 'dbngin'
+# cask 'figma'
+# cask 'flyctl'
+# cask 'font-sf-mono-nerd-font'
+# cask 'herd'
+# cask 'imageoptim'
+# cask 'iina'
+# cask 'iterm2'
+# cask 'kitty'
+# cask 'notion'
+# cask 'obsidian'
+# cask 'orbstack'
+# cask 'raycast'
+# cask 'slack'
+# # cask 'snowflake-snowsql' # fails: `sudo softwareupdate --install-rosetta`
+# cask 'spotify'
+# cask 'sublime-text'
+# cask 'tableplus'
+# cask 'telegram-desktop'
+# cask 'the-unarchiver'
+# cask 'visual-studio-code'
+# cask 'zoom'
 
 # Quicklook
 # cask 'qlcolorcode'
@@ -90,8 +86,6 @@ cask 'font-open-sans'
 cask 'font-roboto'
 cask 'font-source-code-pro-for-powerline'
 cask 'font-source-code-pro'
-cask 'font-source-sans-pro'
-cask 'font-source-serif-pro'
 
 # Mac App Store
 # mas 'Keynote', id: 409183694
@@ -100,4 +94,3 @@ cask 'font-source-serif-pro'
 # mas 'BetterSnapTool', id: 417375580
 # mas 'Microsoft Outlook', id: 985367838
 # mas 'Microsoft Excel', id: 462058435
-

@@ -34,25 +34,9 @@ prompt pure
 [ -s "/Users/tomnagengast/.bun/_bun" ] && source "/Users/tomnagengast/.bun/_bun"
 export BUN_INSTALL="/Users/tomnagengast/.bun"
 
-# Pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PYENV_SHELL="zsh"
-# if command -v pyenv 1>/dev/null 2>&1; then
-#   eval "$(pyenv init -)"
-#   eval "$(pyenv virtualenv-init -)"
-# fi
-# For pyenv: https://stackoverflow.com/questions/50036091/pyenv-zlib-error-on-macos
-export LDFLAGS="-L $(xcrun --show-sdk-path)/usr/lib"
-export CFLAGS="-L $(xcrun --show-sdk-path)/usr/include -L brew --prefix bzip2/include"
-
 # For Java
 export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
 export JAVA_HOME="/opt/homebrew/opt/openjdk"
-
-# Herd
-export PHP_INI_SCAN_DIR="/Users/tomnagengast/Library/Application Support/Herd/config/php/":$PHP_INI_SCAN_DIR
-export HERD_PHP_82_INI_SCAN_DIR="/Users/tomnagengast/Library/Application Support/Herd/config/php/82/"
-export HERD_PHP_83_INI_SCAN_DIR="/Users/tomnagengast/Library/Application Support/Herd/config/php/83/"
 
 # dbt
 export DBT_STATE=target/production
@@ -63,6 +47,10 @@ export DBT_CLOUD_PROJECT_ID=304574
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Silence punycode deprecation warning
+export NODE_OPTIONS="--no-deprecation"
+# Set max old space size for CDKTF ts
+export NODE_OPTIONS="${NODE_OPTIONS} --max-old-space-size=4096"
 
 # pnpm
 export PNPM_HOME="/Users/tomnagengast/Library/pnpm"
@@ -73,7 +61,23 @@ esac
 # pnpm end
 
 
+# . "$HOME/.cargo/env"
 
-# Herd injected PHP binary.
+# nix & direnv
+# if [[ "$PWD" == "$HOME/work"* ]]; then
+#     mkdir -p "${HOME}/.config/direnv"
+#     echo 'source $HOME/.nix-profile/share/nix-direnv/direnvrc' >> "${HOME}/.config/direnv/direnvrc"
+#     eval "$(direnv hook zsh)"
+# fi
+
+# run source ./venv/bin/activate if directory contains venv
+if [ -d "./venv" ]; then
+    source ./venv/bin/activate
+fi
+
+# Herd
 export PATH="/Users/tomnagengast/Library/Application Support/Herd/bin/":$PATH
-. "$HOME/.cargo/env"
+export PHP_INI_SCAN_DIR="/Users/tomnagengast/Library/Application Support/Herd/config/php/":$PHP_INI_SCAN_DIR
+export HERD_PHP_82_INI_SCAN_DIR="/Users/tomnagengast/Library/Application Support/Herd/config/php/82/"
+export HERD_PHP_83_INI_SCAN_DIR="/Users/tomnagengast/Library/Application Support/Herd/config/php/83/"
+export HERD_PHP_84_INI_SCAN_DIR="/Users/tomnagengast/Library/Application Support/Herd/config/php/84/"

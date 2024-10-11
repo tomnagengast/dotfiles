@@ -4,13 +4,13 @@ pathadd() {
     fi
 }
 
+# Homebrew
+pathadd /opt/homebrew/bin
+
 # Use project specific binaries before global ones
 pathadd $HOME/.local/bin
 pathadd /usr/local/bin
 pathadd /usr/local/sbin
-
-# Homebrew
-pathadd /opt/homebrew/bin
 
 # Composer
 pathadd $HOME/.composer/vendor/bin
@@ -22,10 +22,6 @@ pathadd node_modules/.bin
 
 # Bun
 pathadd $BUN_INSTALL/bin
-
-# pyenv
-pathadd $(pyenv root)/shims
-pathadd $PYENV_ROOT/bin
 
 # Rust
 pathadd $HOME/.cargo/env
@@ -45,3 +41,4 @@ pathadd /Applications/Postgres.app/Contents/Versions/latest/bin
 # Java
 pathadd $JAVA_HOME/bin # /opt/homebrew/opt/openjdk/bin
 
+pathadd /Users/tomnagengast/work/data-platform/scripts

@@ -22,8 +22,8 @@ alias vim="nvim"
 alias h="history | tail -n 50"
 
 # Directories
-alias work="cd $HOME/code/replicatedhq/data"
-alias me="cd $HOME/code/tomnagengast"
+alias work="cd $HOME/work/data-platform"
+alias me="cd $HOME/personal"
 
 # dbt
 alias dl="dbt ls -s state:modified --resource-type model"
@@ -55,6 +55,9 @@ alias snf=snowsql
 alias art="php artisan"
 alias fresh="php artisan migrate:fresh --seed"
 
+# NPM
+alias nr="npm run"
+
 # Git
 alias clean-local-branches='git branch | grep -v "main" | xargs git branch -D'
 alias amend="git add -A && git commit --amend --no-edit"
@@ -65,7 +68,7 @@ alias pull="git pull"
 alias push="git push"
 alias resolve="git add . && git commit --no-edit"
 alias unstage="git restore --staged ."
-alias wip="ga wip"
+alias wip="ga wip --no-edit"
 alias wipp="wip && push"
 alias aye="git checkout"
 alias gl="glo"

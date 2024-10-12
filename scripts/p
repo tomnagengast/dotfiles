@@ -1,0 +1,39 @@
+#!/usr/bin/env sh
+
+DISPLAY_ID="4F1B0FAD-7B0A-4A4E-AFA0-B0B5993E49A5"
+MODE_1="13"
+MODE_2="11"
+MODE_3="2"
+
+
+CURRENT_MODE=$(displayplacer list | awk -v id=$DISPLAY_ID '$0 ~ "id: " id, /^$/' | grep "current mode"| grep -o -E '[0-9]+' | head -n 1)
+
+echo "Current mode: $CURRENT_MODE"
+# usage: ./toggle.sh --closer
+
+if [ "$1" = "--closer" ]; then
+    UPDATE="id:$DISPLAY_ID mode:$MODE_3"
+    echo "Switching to closer mode: $UPDATE"
+    displayplacer "$UPDATE"
+
+elif [ "$CURRENT_MODE" != "$MODE_1" ]; then
+    UPDATE="id:$DISPLAY_ID mode:$MODE_1"
+    echo "Switching to mode 1: $UPDATE"
+    displayplacer "$UPDATE"
+    defaults write com.apple.finder CreateDesktop -bool true && killall Finder
+
+else
+    UPDATE="id:$DISPLAY_ID mode:$MODE_2"
+    echo "Switching to mode 2: $UPDATE"
+    displayplacer "$UPDATE"
+    defaults write com.apple.finder CreateDesktop -bool false && killall Finder
+
+fi
+
+if [ "$CURRENT_MODE" != "$MODE_1" ]; then
+    defaults write com.apple.finder CreateDesktop -bool true && killall Finder
+
+else
+    defaults write com.apple.finder CreateDesktop -bool false && killall Finder
+
+fi

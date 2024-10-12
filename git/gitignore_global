@@ -48,3 +48,5 @@ __pycache__
 # Temporary indidual files #
 #############################
 *.dev
+v_tmp
+

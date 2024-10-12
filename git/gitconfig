@@ -95,7 +95,7 @@
 
 [commit]
 	# https://help.github.com/articles/signing-commits-using-gpg/
-	gpgsign = false # true
+    # gpgsign = true
 	template = ~/.stCommitMsg
 
 [diff]
@@ -132,6 +132,7 @@
 
 [gpg]
 	program = gpg
+	format = ssh
 
 [tag]
 	forceSignAnnotated = false
@@ -139,6 +140,7 @@
 [user]
 	name = tomnagengast
 	email = tnagengast@gmail.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIB3FOfHxMK6gmUS+IAjVKt8ZuAO4nrZbi5HgXJfF0BTZ
 
 [core]
 	autocrlf = input
@@ -148,3 +150,6 @@
 
 [credential]
 	helper = osxkeychain
+
+# [gpg "ssh"]
+# 	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign

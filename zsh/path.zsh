@@ -5,7 +5,7 @@ pathadd() {
 }
 
 # Use project specific binaries before global ones
-pathadd "$HOME/.local/bin"
+pathadd $HOME/.local/bin
 pathadd /usr/local/bin
 pathadd /usr/local/sbin
 
@@ -25,9 +25,15 @@ pathadd $PYENV_ROOT/bin
 
 # Rust
 pathadd $HOME/.cargo/env
+pathadd $HOME/.cargo/bin
+
+# Go
+pathadd $HOME/go/bin
 
 # Snowflake
 pathadd /Applications/SnowSQL.app/Contents/MacOS
 pathadd /Applications/Sublime Text.app/Contents/SharedSupport/bin
 pathadd /Applications/Postgres.app/Contents/Versions/latest/bin
 
+# Java
+pathadd $JAVA_HOME/bin # /opt/homebrew/opt/openjdk/bin

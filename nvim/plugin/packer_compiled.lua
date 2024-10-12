@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/Users/tomnagengast/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  harpoon = {
+    loaded = true,
+    path = "/Users/tomnagengast/.local/share/nvim/site/pack/packer/start/harpoon",
+    url = "https://github.com/ThePrimeagen/harpoon"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/Users/tomnagengast/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -189,10 +194,30 @@ _G.packer_plugins = {
     path = "/Users/tomnagengast/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  undotree = {
+    loaded = true,
+    path = "/Users/tomnagengast/.local/share/nvim/site/pack/packer/start/undotree",
+    url = "https://github.com/mbbill/undotree"
+  },
   ["vim-commentary"] = {
     loaded = true,
     path = "/Users/tomnagengast/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
+  },
+  ["vim-dadbod"] = {
+    loaded = true,
+    path = "/Users/tomnagengast/.local/share/nvim/site/pack/packer/start/vim-dadbod",
+    url = "https://github.com/tpope/vim-dadbod"
+  },
+  ["vim-heritage"] = {
+    loaded = true,
+    path = "/Users/tomnagengast/.local/share/nvim/site/pack/packer/start/vim-heritage",
+    url = "https://github.com/jessarcher/vim-heritage"
+  },
+  ["vim-tmux-navigator"] = {
+    loaded = true,
+    path = "/Users/tomnagengast/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
+    url = "https://github.com/christoomey/vim-tmux-navigator"
   }
 }
 

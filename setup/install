@@ -9,6 +9,10 @@ ln -sf $DOTFILES/zsh/zshenv $HOME/.zshenv
 
 ln -sf $DOTFILES/mackup/mackup.cfg $HOME/.mackup.cfg
 
+# 1Password
+rm -rf $HOME/.config/1Password
+ln -s $DOTFILES/1Password $HOME/.config/1Password
+
 # Neovim
 rm -rf $HOME/.config/nvim
 ln -s $DOTFILES/nvim $HOME/.config/nvim
@@ -25,18 +29,22 @@ ln -s $DOTFILES/kitty $HOME/.config/kitty
 ln -sf $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
 
 # Git
-ln -sf $DOTFILES/git/gitignore_global $HOME/.gitignore_global
 ln -sf $DOTFILES/git/gitconfig $HOME/.gitconfig
+ln -sf $DOTFILES/git/gitignore_global $HOME/.gitignore_global
 
 # Scripts
+mkdir -p $HOME/.local/bin
 ln -sf $DOTFILES/scripts/t $HOME/.local/bin/t
+ln -sf $DOTFILES/scripts/378u $HOME/.local/bin/378u
 
 # NVM (Node Version Manager)
 mkdir -p $HOME/.nvm
 ln -sf $DOTFILES/nvm/default-packages $HOME/.nvm/default-packages
 
 # dbt
-mkdir -p $HOME/.dbt
-ln -sf $DOTFILES/dbt/profiles.yml $HOME/.dbt/profiles.yml
+if [ -d $HOME/.dbt ]; then
+  mv $HOME/.dbt $HOME/.dbt.old
+fi
+cp -r $DOTFILES/dbt $HOME/.dbt
 
 zsh

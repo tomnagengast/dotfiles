@@ -1,4 +1,5 @@
 replit:
+<<<<<<< HEAD
   target: "{{ env_var('DBT_TARGET', 'dev') }}"
   outputs:
     dev:
@@ -35,17 +36,48 @@ replit:
       method: oauth
 
 cortex:
+=======
+>>>>>>> 18b03176ad605ed5de21172be6c0589c4332f882
   target: dev
   outputs:
     dev:
       type: bigquery
+<<<<<<< HEAD
       project: replit-analytics-dev
       dataset: dev_tom
+=======
+      project: replit-analytics
+      dataset: "{{ env_var('TARGET_SCHEMA', 'dev_tom') }}"
       location: US
       threads: 25
       job_execution_timeout_seconds: 300
       job_retries: 1
       method: oauth
+      # method: service-account
+      # keyfile: /Users/tomnagengast/.config/gcloud/data-platform-staging@replit-analytics.iam.gserviceaccount.com.json
+    staging:
+      type: bigquery
+      project: replit-analytics-dev
+      dataset: "{{ env_var('TARGET_SCHEMA', 'PR_119') }}"
+      location: US
+      threads: 25
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      method: oauth
+      # method: service-account
+      # keyfile: /Users/tomnagengast/.config/gcloud/data-platform-staging@replit-analytics.iam.gserviceaccount.com.json
+    production:
+      type: bigquery
+      project: replit-analytics
+      execution_project: replit-analytics
+      dataset: core_data_deps
+>>>>>>> 18b03176ad605ed5de21172be6c0589c4332f882
+      location: US
+      threads: 25
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      method: oauth
+<<<<<<< HEAD
     # stag:
     #   type: bigquery
     #   project: replit-analytics-dev
@@ -67,3 +99,5 @@ cortex:
     #   method: oauth
     #   # method: service-account
     #   # keyfile: /Users/tomnagengast/.config/gcloud/data-platform-staging@replit-analytics.iam.gserviceaccount.com.json
+=======
+>>>>>>> 18b03176ad605ed5de21172be6c0589c4332f882

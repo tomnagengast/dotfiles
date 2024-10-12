@@ -146,3 +146,5 @@
 [init]
 	templateDir = /Users/tomnagengast/.git-template
 
+[credential]
+	helper = osxkeychain

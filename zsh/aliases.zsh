@@ -17,13 +17,13 @@ alias work="cd $HOME/code/replicatedhq/data"
 alias me="cd $HOME/code/tomnagengast"
 
 # dbt
-alias dl="dbt ls -s state:modified --resource-type model"
-alias dr="dbt run -s state:modified"
-alias drm="dbt run -s"
-alias db="dbt build -s state:modified"
-alias dbm="dbt build -s"
-alias dt="dbt test -m state:modified"
-alias dtm="dbt test"
+alias dl="uv run dbt ls -s state:modified --resource-type model"
+alias dr="uv run dbt run -s state:modified"
+alias drm="uv run dbt run -s"
+alias db="uv run dbt build -s state:modified"
+alias dbm="uv run dbt build -s"
+alias dt="uv run dbt test -m state:modified"
+alias dtm="uv run dbt test"
 
 # GitHub
 alias npr="cpsc && gh pr create --web --label 'type::feature' -F ~/code/replicatedhq/__templates/dbt_pr.md"
@@ -37,6 +37,7 @@ alias snf=snowsql
 
 # Laravel
 alias art="php artisan"
+alias a="php artisan"
 alias fresh="php artisan migrate:fresh --seed"
 
 # Git
@@ -69,4 +70,3 @@ alias localip="ipconfig getifaddr en0"
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 alias path='echo -e ${PATH//:/\\n}'
-

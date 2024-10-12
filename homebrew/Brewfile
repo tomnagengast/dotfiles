@@ -11,6 +11,7 @@ tap 'epk/epk'
 brew 'bash' # Latest Bash version
 brew 'coreutils' # Those that come with macOS are outdated
 brew 'dbt-postgres'
+brew 'discord'
 brew 'duckdb'
 brew 'ffmpeg' # https://github.com/ZachNagengast/dotfiles/blob/master/brew-install.sh
 brew 'fzf'

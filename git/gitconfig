@@ -145,11 +145,12 @@
 [core]
 	autocrlf = input
 	excludesfile = /Users/tomnagengast/.gitignore_global
+
 [init]
 	templateDir = /Users/tomnagengast/.git-template
 
 [credential]
 	helper = osxkeychain
 
-# [gpg "ssh"]
-# 	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign

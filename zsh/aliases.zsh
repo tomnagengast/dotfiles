@@ -1,6 +1,6 @@
 # Override default commands
-alias cat="bat --plain"
-alias ls="lsd"
+# alias cat="bat --plain"
+# alias ls="lsd"
 
 # SSH
 alias gogogo="ssh -i ~/.ssh/replit -p 22 5dbe8df1-a623-4cc2-a30e-c954e2114be0@5dbe8df1-a623-4cc2-a30e-c954e2114be0-00-20lqwhdcc1630.kirk.replit.dev"
@@ -88,3 +88,4 @@ alias localip="ipconfig getifaddr en0"
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 alias path='echo -e ${PATH//:/\\n}'
+

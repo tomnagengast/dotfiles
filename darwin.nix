@@ -19,6 +19,4 @@
     name = "tomnagengast";
     home = "/Users/tomnagengast";
   };
-
-
 }

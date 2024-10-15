@@ -6,16 +6,10 @@
     neovim 
     pure-prompt
     tmux
-    uv
+    # uv
   ];
   
   home.file = {
-    # Home nix config.
-    # ".config/nixpkgs/config.nix".text = "{ allowUnfree = true; }";
-    
-    # empty zshrc to stop zsh-newuser-install from running
-    # ".zshrc".text = "";
-
     ".config/1Password/ssh/agent.toml".text = ''
       # Add my Git authentication key from my Work vault
       [[ssh-keys]]
@@ -42,20 +36,6 @@
       autosuggestion.enable = true;
       enableCompletion = true;
       initExtra = ''
-        # Nix
-        if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
-          . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
-        fi
-
-        # Ensure Nix-installed binaries are in your PATH
-        export PATH=$HOME/.nix-profile/bin:$PATH
-        export PATH=/etc/profiles/per-user/tomnagengast/bin:$PATH
-        export PATH=/run/current-system/sw/bin:$PATH
-
-        eval "$(direnv hook zsh)"
-        # End Nix
-
-        fpath+=${pkgs.pure-prompt}/share/zsh/site-functions
         zstyle ':omz:update' mode auto
 
         autoload -U promptinit; promptinit
@@ -70,7 +50,7 @@
       
       oh-my-zsh = {
         enable = true;
-        plugins = [ "git" ];
+        plugins = [ "git" "direnv" ];
       };
 
       shellAliases = {

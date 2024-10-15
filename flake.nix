@@ -24,13 +24,13 @@
     darwinConfigurations.tomnagengast = darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       modules = [
-        ./darwin.nix
         home-manager.darwinModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.tomnagengast = import ./home.nix;
         }
+        ./darwin.nix
       ];
       specialArgs = { inherit inputs; };
     };

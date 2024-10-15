@@ -1,6 +1,8 @@
 # Nix
 
-Based on https://davi.sh/til/nix/nix-macos-setup
+Based on:
+- https://davi.sh/til/nix/nix-macos-setup
+- https://github.com/thexyno/nixos-config
 
 
 ## `nix-darwin`

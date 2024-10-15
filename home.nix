@@ -1,20 +1,20 @@
-{ config, pkgs, ... }:
-
-{
+{ config, pkgs, ... }: {
   home.stateVersion = "24.05";
 
-  home.packages = [
-    pkgs.pure-prompt
-    pkgs.uv
+  home.packages = with pkgs; [
+    neovim 
+    tmux
+    pure-prompt
+    uv
   ];
   
   home.file = {
-    # # Building this configuration will create a copy of 'dotfiles/screenrc' in
-    # # the Nix store. Activating the configuration will then make '~/.screenrc' a
-    # # symlink to the Nix store copy.
-    # ".screenrc".source = dotfiles/screenrc;
+    # Home nix config.
+    ".config/nixpkgs/config.nix".text = "{ allowUnfree = true; }";
+    
+    # empty zshrc to stop zsh-newuser-install from running
+    ".zshrc".text = "";
 
-    # # You can also set the file content immediately.
     ".config/1Password/ssh/agent.toml".text = ''
       # Add my Git authentication key from my Work vault
       [[ssh-keys]]

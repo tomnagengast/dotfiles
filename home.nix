@@ -189,7 +189,6 @@
       localip = "ipconfig getifaddr en0";
       hidedesktop = "defaults write com.apple.finder CreateDesktop -bool false && killall Finder";
       showdesktop = "defaults write com.apple.finder CreateDesktop -bool true && killall Finder";
-      # path = "echo -e ${PATH//:/\\n}";
       path = "echo $PATH | tr ':' '\\n'";  
     };
   };

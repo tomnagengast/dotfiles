@@ -20,6 +20,7 @@
     neovim
     pure-prompt
     tmux
+    gcc
   ];
 
   home.file = {

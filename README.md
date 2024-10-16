@@ -3,6 +3,14 @@
 Based on:
 - https://davi.sh/til/nix/nix-macos-setup
 - https://github.com/thexyno/nixos-config
+- https://github.com/ryantm/dotfiles
+- https://github.com/notusknot/dotfiles-nix
+
+Resources:
+- https://github.com/lnl7/nix-darwin
+- https://github.com/nix-community/home-manager
+- https://home-manager-options.extranix.com
+- https://fasterthanli.me/series/building-a-rust-service-with-nix
 
 
 ## `nix-darwin`

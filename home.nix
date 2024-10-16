@@ -4,23 +4,24 @@
   config,
   ...
 }: {
-  home.stateVersion = "24.05";
+  home.stateVersion = "24.11";
 
   programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
     _1password
     bat
+    delta
     fzf
+    gcc
     gh
-    tree
     gnupg
     jq
     lsd
     neovim
     pure-prompt
     tmux
-    gcc
+    tree
   ];
 
   home.file = {
@@ -101,6 +102,12 @@
     userName = "tomnagengast";
     signing.key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIB3FOfHxMK6gmUS+IAjVKt8ZuAO4nrZbi5HgXJfF0BTZ";
     signing.signByDefault = true;
+    delta.enable = true;
+    delta.options = {
+      navigate = true;
+      line-numbers = true;
+      keep-plus-minus-markers = true;
+    };
     extraConfig = {
       commit.gpgSign = true;
       gpg = {

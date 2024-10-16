@@ -1,10 +1,8 @@
-{ pkgs, ... }: {
-  environment.systemPackages = with pkgs; [
-    # gh
-  ];
-  
+{pkgs, ...}: {
+  environment.systemPackages = with pkgs; [];
+
   programs.zsh.enable = true;
-  environment.pathsToLink = [ "/share/zsh" ];
+  environment.pathsToLink = ["/share/zsh"];
   services.nix-daemon.enable = true;
   nix.settings.cores = 0; # use all cores
   nix.settings.max-jobs = 10; # use all cores

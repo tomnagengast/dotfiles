@@ -2,7 +2,7 @@
   pkgs,
   lib,
   config,
-  alejandra,
+  # alejandra,
   ...
 }: {
   home.stateVersion = "24.05";
@@ -11,8 +11,9 @@
 
   home.packages = with pkgs; [
     _1password
-    alejandra.defaultPackage.aarch64-darwin
+    # alejandra.defaultPackage.aarch64-darwin
     bat
+    fzf
     gh
     gnupg
     jq
@@ -24,6 +25,9 @@
 
   home.file = {
     # ".zshenv".source = ./zsh/zshenv;
+    # Remove this line as we're now using the Nix configuration
+    # ".config/tmux/tmux.conf".source = ./tmux/tmux.conf;
+    "bin/t".source = ./scripts/t;
 
     ".config/1Password/ssh/agent.toml".text = ''
       # Add my Git authentication key from my Work vault
@@ -50,6 +54,11 @@
     enable = true;
     enableZshIntegration = true;
     nix-direnv.enable = true;
+  };
+
+  programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;
   };
 
   programs.zsh = {
@@ -110,13 +119,6 @@
       dbm = "uv run dbt build -s";
       dt = "uv run dbt test -m state:modified";
       dtm = "uv run dbt test";
-
-      sf = "sqlfmt && sqlfluff fix";
-      ss = "sqlfmt && sqlfluff lint";
-      tf = "terraform";
-
-      # Airflow
-      comd = "composer-dev";
 
       # GitHub
       npr = "gh pr create --web";
@@ -220,11 +222,11 @@
 
   programs.tmux = {
     enable = true;
-    prefix = "C-z";
-    keyMode = "vi";
-    terminal = "tmux-256color";
-    clock24 = true;
-    baseIndex = 1;
-    newSession = true;
+    shell = "${pkgs.zsh}/bin/zsh";
+    # Import the tmux configuration from tmux/tmux.nix
+    extraConfig = builtins.readFile ./tmux/tmux.nix;
+    plugins = with pkgs.tmuxPlugins; [
+      # Add any tmux plugins you want to use here
+    ];
   };
 }

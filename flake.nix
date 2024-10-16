@@ -21,7 +21,7 @@
     nixpkgs,
     home-manager,
     darwin,
-    alejandra,
+    # alejandra,
     ...
   }: let
     username = "tomnagengast";
@@ -36,7 +36,7 @@
           home-manager.users.${username} = import ./home.nix;
           home-manager.extraSpecialArgs = {
             inherit (self) overlays;
-            inherit inputs alejandra;
+            inherit inputs; #alejandra;
           };
         }
         ./darwin.nix

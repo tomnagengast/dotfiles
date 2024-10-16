@@ -94,22 +94,7 @@ function tre() {
   tree -aC -I '.git|node_modules|vendor' --dirsfirst "$@" | less -FRNX
 }
 
-# Create a new pyenv virtualenv and set it as the local python version
-function new_local_python() (
-  if [ $# -eq 0 ]; then
-    NAME=$(pwd | tr / _)
-    pyenv virtualenv 3.11.3 $NAME
-    pyenv local $NAME
-  else
-    pyenv virtualenv 3.8.6 $@
-    pyenv local $@
-  fi
-  pip install -U pip
-  pyenv versions
-)
-
 gen_model() {
     model_names_json=$(printf '"%s",' "$@" | sed 's/,$//')
     dbt run-operation generate_model_yaml --args "{\"model_names\": [$model_names_json]}"
 }
-

@@ -2,7 +2,6 @@
   pkgs,
   lib,
   config,
-  # alejandra,
   ...
 }: {
   home.stateVersion = "24.05";
@@ -11,7 +10,6 @@
 
   home.packages = with pkgs; [
     _1password
-    # alejandra.defaultPackage.aarch64-darwin
     bat
     fzf
     gh
@@ -25,10 +23,13 @@
   ];
 
   home.file = {
-    "bin/t".source = ./scripts/t;
+    ".config/nvim".source = ./nvim;
+    ".config/nvim".recursive = true;
     ".aliases.zsh".source = ./zsh/aliases.zsh;
     ".functions.zsh".source = ./zsh/functions.zsh;
     ".config/1Password/ssh/agent.toml".source = ./1Password/ssh/agent.toml;
+    ".dbt/profiles.yml".source = ./dbt/profiles.yml;
+    "bin/t".source = ./scripts/t;
   };
 
   home.sessionVariables = {
